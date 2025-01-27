@@ -1,5 +1,9 @@
-# IOS-MCN Releases
+#
+# IOS-MCN Agartala v0.1.0 Release COMING SOON! 
+# THIS REPO IS UNDER DEVELOPMENT - STAY TUNED!
+# 
 
+# IOS-MCN Releases
 IOS-MCN (Indian Open Source for Mobile Communication Networks) provides a neutral, democratic, and trusted platform for the translation of 5G/6G innovation and research into commercially deployable Open Source software.
 
 Please check [our website](https://ios-mcn.org/)
