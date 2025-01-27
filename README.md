@@ -1,5 +1,5 @@
 #
-# IOS-MCN Agartala v0.1.0 Release COMING SOON! 
+# IOS-MCN Agartala v0.1.0 Release is COMING SOON here! 
 # THIS REPO IS UNDER DEVELOPMENT - STAY TUNED!
 # 
 
