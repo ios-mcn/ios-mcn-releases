@@ -1,4 +1,16 @@
-                                 Apache License
+# IOS-MCN - Multi-License Project
+IOS-MCN comprises of multiple open source software components with or without modifications. 
+It may have newly developed code as well. All the newly developed code which are deployed 
+separately will follow Apache v2.0 license. All other open source base code will follow its
+own base licenses (the modifications/and new files along with those packages also follow the
+base licenses as per the licensing terms of the base code unless otherwise mentioned)
+
+Hence, when you use IOS-MCN project for any usage, please follow the respective licenses. 
+In case of doubt, please contact / raise an issue at https://github.com/ios-mcn/ios-mcn-releases/issues
+
+
+# Apache License
+                                Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
 
