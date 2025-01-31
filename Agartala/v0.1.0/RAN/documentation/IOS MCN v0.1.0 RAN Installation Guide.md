@@ -1,4 +1,4 @@
-# ios-mcn RAN Installation / User Guide
+# IOS-MCN RAN Installation / User Guide
 
 **IOS MCN RAN Distributed Sub Project Release**
 
