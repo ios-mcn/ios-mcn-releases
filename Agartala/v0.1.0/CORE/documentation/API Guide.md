@@ -1,4 +1,4 @@
-﻿# **IOS MCN v0.1.0 Agartala Release - API Guide v1.0**
+﻿# **IOS MCN v0.1.0 Agartala Release - CORE API Guide v1.0**
 
 ## **Introduction**
 
