@@ -1,9 +1,9 @@
 ﻿
-# **IOS MCN v0.1.0 Agartala Release Developer Guide: SD-Core v0.1**
+# **IOS MCN v0.1.0 Agartala Release - CORE Developer Guide**
 
 # Introduction
 
-This guide mentions the options to work with IOS-MCN github repository for the software development for SD-Core.
+This guide mentions the options to work with IOS-MCN github repository for the software development for IOS-MCN CORE
 
 # Purpose and Audience
 

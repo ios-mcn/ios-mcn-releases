@@ -1,5 +1,5 @@
 ﻿
-# **IOS MCN v0.1.0 Agartala Release** **User Guide: SD-Core v0.1**
+# **IOS MCN v0.1.0 Agartala Release** **- CORE User Guide**
 
 ## Introduction
 
