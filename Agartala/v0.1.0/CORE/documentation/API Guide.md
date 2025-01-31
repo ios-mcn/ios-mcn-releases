@@ -5,7 +5,7 @@
 This REST APIs are used to configure subscribers, device groups and network slice of SD-Core.
 
 ## **Purpose and Audience**
-
+This guide is for the developers to interface using API 
 
 ## **API Specification**
 
@@ -228,8 +228,8 @@ Below example creates Network Slice with set of eNBs, UPF and device groups. Not
 
 | **Document Name** | **Purpose** | **Link** |
 |--|--|--|
-| User Guide | Quick start guide | |
-| Installation Guide | Installation of SD-Core |
-| Troubleshooting Guide  | Troubleshooting guide for SD-Core | |
-| Developer Guide | Guide for SD-Core developers | |	
-| API Gude | API for subscriber creations|
+| Installation Guide | Installation of SD-Core | [Click here](./Installation%20Guide.md) |
+| Troubleshooting Guide  | Troubleshooting guide for SD-Core | [Click here](./Troubleshooting%20Guide.md)|
+| Developer Guide | Guide for SD-Core developers | [Click Here](./Developer%20Guide.md)|
+| User Guide | Quick user guide | [Click Here](./User%20Guide.md)  |
+| API Guide | API guide | [Click here](./API%20Guide.md)|

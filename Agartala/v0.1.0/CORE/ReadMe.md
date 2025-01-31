@@ -1,2 +1,13 @@
-# IOS-MCN CORE Sub-Project Release
-<Introduction go here. Give links to the website than repeating the information here>
+# CORE Documentation
+IOS-MCN CORE Sub-Project Release
+
+
+[User Guide](./documentation/User%20Guide.md)
+
+[Installation Guide](./documentation/Installation%20Guide.md)
+
+[Developer Guide](./documentation/Developer%20Guide.md)
+
+[API Guide](./documentation/API%20Guide.md)
+
+[Troubleshooting Guide](./documentation/Troubleshooting%20Guide.md)

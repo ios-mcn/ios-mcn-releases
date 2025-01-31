@@ -1,12 +1,12 @@
 ## This document explains how to use the pre-built images for deployment 
 
-Step 1 : untar the iosmcn.agartala.v0.1.0.core.images.tar.gz
+Step 1: Untar the iosmcn.agartala.v0.1.0.core.images.tar.gz to get the deployment script.
 
 ```sh
 tar -xvzf iosmcn.agartala.v0.1.0.core.images.tar.gz
 
 ```
-<< Request Dev team to update the steps from here>>
+Step 2: Follow the [IOS MCN Installation Guide](../documentation/Installation%20Guide.md) document to deploy the core.
 
 
 
