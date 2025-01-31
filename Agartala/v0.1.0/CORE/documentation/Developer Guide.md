@@ -3,7 +3,7 @@
 
 # Introduction
 
-This guide mentions the options to work with IOS-MCN github repository for the software development for SD-Core.
+This guide mentions the options to work with IOS-MCN github repository for the software development for IOS-MCN CORE
 
 # Purpose and Audience
 
