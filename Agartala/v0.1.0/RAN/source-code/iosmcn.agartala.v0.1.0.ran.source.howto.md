@@ -6,4 +6,8 @@ Step 1 : untar the iosmcn.agartala.v0.1.0.core.ran.tar.gz
 tar -xvzf iosmcn.agartala.v0.1.0.core.ran.tar.gz
 
 ```
-<< Request Dev team to update the steps from here>>
+Step 2 :  run the following command from inside the ios-mcn-ran-distributed directory to build all libs
+
+```sh
+sudo make all
+```
