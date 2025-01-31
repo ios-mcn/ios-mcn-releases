@@ -1,4 +1,4 @@
-# ios-mcn RAN Troubleshooting Guides
+# IOS-MCN RAN Troubleshooting Guides
 
 Please follow the below links as references:
  - https://gitlab.eurecom.fr/oai/openairinterface5g/-/blob/develop/common/utils/T/DOC/T.md
