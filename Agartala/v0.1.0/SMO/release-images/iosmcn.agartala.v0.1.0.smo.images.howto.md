@@ -1,15 +1,24 @@
 ## This document explains how to use the pre-built images for deployment 
 
-Step 1 : untar the iosmcn.agartala.v0.1.0.smo.images.tar.gz
+OAM deployment is about runing multiple containers. The source-code of oam has 2 simple steps to run OAM containers.
+
+In the OAM source code, you will find .env file. Currently, the .env file already refers to the pre-built images as summarized in the below table.
+
+Step 1 : Unzip the SMO/OAM source code
 
 ```sh
 tar -xvzf iosmcn.agartala.v0.1.0.smo.images.tar.gz
-
+cd iosmcn.agartala.v0.1.0.smo/
+tar -xzvf oam-0.0.2.iosmcn.smo.oam.tar.gz
+cd oam-0.0.2.iosmcn.smo.oam
 ```
-<< Request Dev team to update the steps from here>>
 
+Step 2: Open the .env and ensure the images listed below are correctly referenced.
 
-
+```sh
+cd oam-0.0.2.iosmcn.smo.oam
+vi .env
+```
 
 |Image|Image Download URL |Docker command|
 |--|--|--|
@@ -28,4 +37,6 @@ tar -xvzf iosmcn.agartala.v0.1.0.smo.images.tar.gz
 |ves-collector|https://github.com/orgs/ios-mcn/packages/container/package/ves-collector|docker pull ghcr.io/ios-mcn/ves-collector:1.12.3|
 |nonrtric-plt-pmlog|https://github.com/orgs/ios-mcn/packages/container/package/nonrtric-plt-pmlog|docker pull ghcr.io/ios-mcn/nonrtric-plt-pmlog:1.0.0|
 
+### Building custom images and using it.
 
+Please refer to the oam developer guide that you will find in the SMO documentation.
