@@ -6,7 +6,7 @@ Step 1 : untar the iosmcn.agartala.v0.1.0.core.ran.tar.gz
 tar -xvzf iosmcn.agartala.v0.1.0.core.ran.tar.gz
 
 ```
-## This document explains how to use the pre-built images for deployment 
+## This document explains how to use the source code to build and deploy the RAN. 
 
 Step 1 : untar the iosmcn.agartala.v0.1.0.ran.images.tar.gz
 
@@ -172,7 +172,6 @@ $ sudo ./install_dhcp_server.sh
 You can use the make commands provided in the build to install the RAN dependencies and the RAN.
 ```sh
 $ cd ~/ios-mcn-ran-distributed/
-$ make git
 $ sudo make dependency
 $ sudo make all
 $ sudo make install
