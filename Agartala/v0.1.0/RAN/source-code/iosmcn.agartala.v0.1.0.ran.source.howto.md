@@ -6,14 +6,6 @@ Step 1 : untar the iosmcn.agartala.v0.1.0.core.ran.tar.gz
 tar -xvzf iosmcn.agartala.v0.1.0.core.ran.tar.gz
 
 ```
-## This document explains how to use the source code to build and deploy the RAN. 
-
-Step 1 : untar the iosmcn.agartala.v0.1.0.ran.images.tar.gz
-
-```sh
-tar -xvzf iosmcn.agartala.v0.1.0.ran.images.tar.gz
-
-```
 # System Initialization 
 ### System configuration for the setup:
 **CPU:** Intel® Xeon® Gold 6544Y Processor </br>
