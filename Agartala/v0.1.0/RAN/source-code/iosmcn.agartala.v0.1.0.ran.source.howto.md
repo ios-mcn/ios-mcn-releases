@@ -1,4 +1,4 @@
-## This document explains how to build the images from source-code.
+## This document explains how to build and deploy the images from source-code.
 
 Step 1 : untar the iosmcn.agartala.v0.1.0.core.ran.tar.gz
 
