@@ -24,9 +24,9 @@ tar -xvzf smf-0.0.6.iosmcn.core.smf.tar.gz
 
 Step 3: Create a new repository in [GitHub](https://github.com/new).
 
-Step 4: Create a new branch named **iosmcnmaster** and set is as [default branch](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/changing-the-default-branch).
+Step 4: Create a new branch named _iosmcnmaster_ and set is as default branch.
 
-Step 5: Push the extracted code to the newly created repository. Follow the GitHub [documentation](https://docs.github.com/en/get-started/start-your-journey/uploading-a-project-to-github) for detailed steps.
+Step 5: Push the extracted code to the newly created repository. Follow the GitHub documentation for detailed steps. Make sure the code is pushed to the _iosmcnmaster_ branch.
 
 Step 6: A GitHub workflow is already set up for building and testing. Modify the workflow to build and push the image to the container registry.
 
@@ -43,6 +43,32 @@ Step 11: Create Secrets for container registry repository username and password 
 
 Step 12: Go to **Actions tab** in the GitHub repository. Select the IOSMCN Master workflow.
 
-Step 13: Click on **Run workflow**.
+Step 13: Click on **Run workflow** to manually trigger the workflow. The workflow will be triggered automatically when the new changes are pushed to the iosmcnmaster branch.
 
 Step 14: Once the workflow completes successfully, the built image will be pushed to the configured container registry.
+## Deployment
+
+- Open IOSMCN-CoreDpm and edit iosmcn-5g-values.yaml file located in the below mentioned location.
+
+>IOSMCN-CoreDpm/deps/5gc/roles/core/templates/iosmcn-5g-values.yaml
+
+- Update the image name to the newly built image under the tag section of the yaml file.
+
+```
+5g-control-plane:
+  enable5G: true
+  images:
+    repository: ""    # defaults to Docker Hub
+    tags:
+      amf: docker.io/iosmcnbuildtest/5gc-amf:master-latest
+
+```
+
+- Run the following command to reset the core.
+
+    _make aether-resetcore_
+
+- Check the pod status using the command.
+
+    _kubectl get pods -n iosmcn_
+![Figure 13: pods status](../../CORE/documentation/images/devel/fig1-pod-stats.png)

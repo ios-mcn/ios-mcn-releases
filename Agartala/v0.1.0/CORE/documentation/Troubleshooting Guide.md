@@ -1,9 +1,11 @@
 ﻿
-# **IOS MCN v0.1.0 Agartala Release - CORE Troubleshooting Guide**
+# **IOS MCN v0.1.0 Agartala Release Troubleshooting Guide: IOSMCN-Core v0.1**
+
+
 
 ## Introduction
 
-The guide lists the possible errors and issues facing in the installation and running of SD-Core on the server. There are many networks interfaces and pods for each services on the 5G core solution. The connections, interfaces, pods and other services are covered on the troubleshooting guide.
+The guide lists the possible errors and issues facing in the installation and running of IOSMCN-Core on the server. There are many networks interfaces and pods for each services on the 5G core solution. The connections, interfaces, pods and other services are covered on the troubleshooting guide.
 
 ## Purpose and Audience
 
@@ -68,48 +70,48 @@ $kubectl describe nodes*
 -	Issue Title: Pod status
 -	Description: Verify the status of pod
 -	Common Solutions: Execute the following command and observe results.
-*$kubectl -n omec get pods	
+*$kubectl -n iosmcn get pods	
 $kubectl get pods --all-namespaces -o wide (Displays IP address details also)
 $kubectl -n aether-roc get pods	
-$kubectl logs pod-name -n omec (To get logs from a pod)*
+$kubectl logs pod-name -n iosmcn (To get logs from a pod)*
 ###	Error/Issue 12
 -	Issue Title: Service Ip status
 -	Description: verification of service IP
 -	Common Solutions: Execute the commads and observe IP
-*$kubectl get svc -n omec -o wide
+*$kubectl get svc -n iosmcn -o wide
 $kubectl get svc --all-namespaces -o wide*
 ###	Error/Issue 13
 -	Issue Title: Pod to Pod not reachable
 -	Description: ping pod to pod
--	Common Solutions: *$kubectl exec -ti pod-name -n omec -- ping 192.168.85.216*
+-	Common Solutions: *$kubectl exec -ti pod-name -n iosmcn -- ping 192.168.85.216*
 ###	Error/Issue 14
 -	Issue Title: Pod not responding
 -	Description: Restart the pod
 -	Common Solutions: Run the command on terminal
-*$kubectl delete pod <pod-name> -n omec*
+*$kubectl delete pod <pod-name> -n iosmcn*
 ###	Error/Issue 15
 -	Issue Title: Edit pod
 -	Description: Verify and update pod configuration
--	Common Solutions: User the command *$kubectl edit* *configmap -n omec <pod>, for eg. $kubectl edit configmap -n omec amf*
+-	Common Solutions: User the command *$kubectl edit* *configmap -n iosmcn <pod>, for eg. $kubectl edit configmap -n iosmcn amf*
 ###	Error/Issue 16
 -	Issue Title: IMS service not available
 -	Description: IMS Enable in AMF Pod
 -	Common Solutions: Update the config as per the following instruction
-*$kubectl edit configmap -n omec amf*
+*$kubectl edit configmap -n iosmcn amf*
 In networkFeatureSupport5GS, Change IMSVoPS From 0 to 1 as shown below
- ![IMS configuration](./images/Figure1_imsVoPS.png)
+ ![IMS configuration](./images/ts/Figure1_imsVoPS.png)
 
  
 ###	Error/Issue 17
 -	Issue Title: Pod status is not updating
 -	Description: To get kubernetes pod status in every one second
 -	Common Solutions: Run the command to get status periodically
-*$ watch n1 kubectl get pods -n omec*
+*$ watch n1 kubectl get pods -n iosmcn*
 ###	Error/Issue 18
 -	Issue Title: Access UPF pod
 -	Description: Get inside UPF pod
 -	Common Solutions: Access the pod with the command
- *$ kubectl exec it upf-0 -n omec -- bin/bash*
+ *$ kubectl exec it upf-0 -n iosmcn -- bin/bash*
 ###	Error/Issue 19
 -	Issue Title: check network namespaces
 -	Description: To get namespace of network
@@ -125,17 +127,17 @@ $ sudo arp -s 192.168.250.3 <macaddress>*
 -	Description: Packet capture inside upf pod
 -	Common Solutions: Execute the commands
 *$ tcpdump accessFastBPF in 0 -ne w packet.pcap
-$ kubectl cp omec/upf-0:/opt/bess/bessctl/packet.pcap* /home/cssuser/packet.pcap
+$ kubectl cp iosmcn/upf-0:/opt/bess/bessctl/packet.pcap* /home/cssuser/packet.pcap
 ###	Error/Issue 22
 -	Issue Title: Pod status not updating
 -	Description: Get pod status every 1 second
 -	Common Solutions: Use command on terminal 
- *$ watch -n1 kubectl get pods -n omec*
+ *$ watch -n1 kubectl get pods -n iosmcn*
 ###	Error/Issue 23
 -	Issue Title: Pod deletes error
 -	Description: Force to delete pod
 -	Common Solutions:  Delete Pod forcefully
-*$ kubectl delete pod n omec <podname> --force –grace-period=0*
+*$ kubectl delete pod n iosmcn <podname> --force –grace-period=0*
 ###	Error/Issue 24
 -	Issue Title: Interface creation
 -	Description:  Create Virtual Iface for Iperf
@@ -150,7 +152,7 @@ sudo ip addr add 192.162.45.45 dev ipfdld*
 ###	Error/Issue 26
 -	Issue Title: previous pod log 
 -	Description: Check previous pod log
--	Common Solutions: *$ kubectl logs <pod-name> --previous -n omec*
+-	Common Solutions: *$ kubectl logs <pod-name> --previous -n iosmcn*
 ###	Error/Issue 27
 -	Issue Title: Lists all the network namespaces
 -	Description: Lists all the network namespaces
@@ -183,20 +185,20 @@ done*
 
 
 ##	Frequently Asked Questions
-###	What is the minimum hardware requirement for installing SD-Core?
+###	What is the minimum hardware requirement for installing IOSMCN-Core?
 The core software requires at least 4 CPU cores and 16GB RAM memory to installation.
 ### Provide the port numbers and URL for accessing the management interface
 The application uses port number 31194 and 30950. It can verify using the following URLs
 *http://<server_ip>:<port_number >* 
 ###	How to view the status of a pod?
 Take a terminal and input the command, 
-*kubectl -n omec get pods*
+*kubectl -n iosmcn get pods*
 This command will return the status of pods
 ###	My pod is not responding for a long time. How can I restart a pod?
 Use the command 
-*kubectl delete pod <pod-name> -n omec*
+*kubectl delete pod <pod-name> -n iosmcn*
 to restart the pod again
-###	How to list all network namespaces in SD-Core installed system?
+###	How to list all network namespaces in IOSMCN-Core installed system?
 The following command lists all namespaces
 *sudo ip netns list*
 
@@ -204,8 +206,8 @@ The following command lists all namespaces
 
 | **Document Name** | **Purpose** | **Link** |
 |--|--|--|
-| Installation Guide | Installation of SD-Core | [Click here](./Installation%20Guide.md) |
-| Developer Guide | Guide for SD-Core developers | [Click Here](./Developer%20Guide.md)|
+| Installation Guide | Installation of IOSMCN-Core | [Click here](./Installation%20Guide.md) |
+| Developer Guide | Guide for IOSMCN-Core developers | [Click Here](./Developer%20Guide.md)|
 | User Guide | Quick user guide | [Click Here](./User%20Guide.md)  |
 | API Guide | API guide | [Click here](./API%20Guide.md)|
-| Troubleshooting Guide  | Troubleshooting guide for SD-Core | [Click here](./Troubleshooting%20Guide.md)|
+| Troubleshooting Guide  | Troubleshooting guide for IOSMCN-Core | [Click here](./Troubleshooting%20Guide.md)|

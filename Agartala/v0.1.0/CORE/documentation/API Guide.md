@@ -1,8 +1,8 @@
-﻿# **IOS MCN v0.1.0 Agartala Release - CORE API Guide v1.0**
+﻿# **IOS MCN v0.1.0 Agartala Release - API Guide v1.0**
 
 ## **Introduction**
 
-This REST APIs are used to configure subscribers, device groups and network slice of SD-Core.
+This REST APIs are used to configure subscribers, device groups and network slice of IOSMCN-Core.
 
 ## **Purpose and Audience**
 This guide is for the developers to interface using API 
@@ -12,7 +12,7 @@ This guide is for the developers to interface using API
 
 ### API 1 
 **Subscriber Configuration**
-Below example configures subscriber 208014567891209 in the SD-Core. You can any number of subscribers using these APIs. SD-Core takes care of configuring Network Function responsible for authentication with the below details.
+Below example configures subscriber 208014567891209 in the IOSMCN-Core. You can any number of subscribers using these APIs. IOSMCN-Core takes care of configuring Network Function responsible for authentication with the below details.
 
 - Post:
   URL: `http://<config-service-name-or-ip>:<port>/api/subscriber/<imsi-xxx>`
@@ -142,7 +142,7 @@ Below example creates Network Slice with set of eNBs, UPF and device groups.
   URL: `http://<config-service-name-or-ip>:<port>/network-slice/<slice-name>`
   Ex: `http://config5g:8080/network-slice/slice1`
 
-Slice needs to have single UPF. Multiple UPFs can not be added in single Slice. One or more access nodes can be added in slice. For now SD-Core does not do any validation of access nodes connecting to MME/AMF, but TAC & PLMN validation is done in Core Network.
+Slice needs to have single UPF. Multiple UPFs can not be added in single Slice. One or more access nodes can be added in slice. For now IOSMCN-Core does not do any validation of access nodes connecting to MME/AMF, but TAC & PLMN validation is done in Core Network.
 
 
 ### API 4
@@ -228,8 +228,8 @@ Below example creates Network Slice with set of eNBs, UPF and device groups. Not
 
 | **Document Name** | **Purpose** | **Link** |
 |--|--|--|
-| Installation Guide | Installation of SD-Core | [Click here](./Installation%20Guide.md) |
-| Troubleshooting Guide  | Troubleshooting guide for SD-Core | [Click here](./Troubleshooting%20Guide.md)|
-| Developer Guide | Guide for SD-Core developers | [Click Here](./Developer%20Guide.md)|
+| Installation Guide | Installation of IOSMCN-Core | [Click here](./Installation%20Guide.md) |
+| Troubleshooting Guide  | Troubleshooting guide for IOSMCN-Core | [Click here](./Troubleshooting%20Guide.md)|
+| Developer Guide | Guide for IOSMCN-Core developers | [Click Here](./Developer%20Guide.md)|
 | User Guide | Quick user guide | [Click Here](./User%20Guide.md)  |
 | API Guide | API guide | [Click here](./API%20Guide.md)|
