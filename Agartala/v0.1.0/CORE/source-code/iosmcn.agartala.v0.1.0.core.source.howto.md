@@ -30,7 +30,7 @@ Step 5: Push the extracted code to the newly created repository. Follow the GitH
 
 Step 6: A GitHub workflow is already set up for building and testing. Modify the workflow to build and push the image to the container registry.
 
-Step 7: Open the workflow file **\.github\workflows\iosmcn-master.yml** and make the following modifications from Step 8 - Step 10.
+Step 7: Open the workflow file **\.github\workflows\iosmcn-release-push.yml** and make the following modifications from Step 8 - Step 10.
 
 Step 8: Remove below mentioned line in each workflow job to remove ownership check:
 > if: github.repository_owner == 'ios-mcn-core'

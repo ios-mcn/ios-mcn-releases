@@ -35,13 +35,13 @@ tar -xvzf smf-0.0.6.iosmcn.core.smf.tar.gz
 
 Step 3: Create a new repository in [GitHub](https://github.com/new).
 
-Step 4: Create a new branch named iosmcnmaster and set is as default branch.
+Step 4: Create a new branch named _iosmcnmaster_ and set is as default branch.
 
-Step 5: Push the extracted code to the newly created repository. Follow the GitHub documentation for detailed steps. Make sure the code is pushed to the _cdacmaster_ branch.
+Step 5: Push the extracted code to the newly created repository. Follow the GitHub documentation for detailed steps. Make sure the code is pushed to the _iosmcnmaster_ branch.
 
 Step 6: A GitHub workflow is already set up for building and testing. Modify the workflow to build and push the image to the container registry.
 
-Step 7: Open the workflow file **\.github\workflows\cdac-master.yml** and make the following modifications from Step 8 - Step 10.
+Step 7: Open the workflow file **\.github\workflows\iosmcn-release-push.yml** and make the following modifications from Step 8 - Step 10.
 
 Step 8: Remove below mentioned line in each workflow job to remove ownership check:
 
