@@ -37,27 +37,23 @@ Step 3: Create a new repository in [GitHub](https://github.com/new).
 
 Step 4: Create a new branch named _iosmcnmaster_ and set is as default branch.
 
-Step 5: Push the extracted code to the newly created repository. Follow the GitHub documentation for detailed steps. Make sure the code is pushed to the _iosmcnmaster_ branch.
+Step 5: Push the extracted code to the newly created repository. Follow the [GitHub documentation](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github) for detailed steps. Make sure the code is pushed to the _iosmcnmaster_ branch.
 
-Step 6: A GitHub workflow is already set up for building and testing. Modify the workflow to build and push the image to the container registry.
+Step 6: A GitHub workflow is already set up for building the release image. Modify the workflow to build and push the image to the container registry.
 
 Step 7: Open the workflow file **\.github\workflows\iosmcn-release-push.yml** and make the following modifications from Step 8 - Step 10.
 
-Step 8: Remove below mentioned line in each workflow job to remove ownership check:
+Step 8: Update the container registry values in the variables - *REGISTRY*, *DOCKER_REGISTRY* (docker.io, ghcr.io).
 
-> if: github.repository_owner == 'ios-mcn-core'
+Step 9: Update the container registry repository username value in the variable - *DOCKER_REPOSITORY*.
 
-Step 9: Update the container registry values in the variables - *REGISTRY*, *DOCKER_REGISTRY* (docker.io, ghcr.io).
+Step 10: Create Secrets for container registry repository username and password with key named - GHCRUSER & GHCRPASS. Refer the [GitHub documentation](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions).
 
-Step 10: Update the container registry repository username value in the variable - *DOCKER_REPOSITORY*.
+Step 11: Go to **Actions tab** in the GitHub repository. Select the IOSMCN Release Workflow.
 
-Step 11: Create Secrets for container registry repository username and password with key named - GHCRUSER & GHCRPASS. Refer the [GitHub documentation](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions).
+Step 12: Click on **Run workflow** to manually trigger the workflow.
 
-Step 12: Go to **Actions tab** in the GitHub repository. Select the IOSMCN Master workflow.
-
-Step 13: Click on **Run workflow** to manually trigger the workflow. The workflow will be triggered automatically when the new changes are pushed to the iosmcnmaster branch.
-
-Step 14: Once the workflow completes successfully, the built image will be pushed to the configured container registry.
+Step 13: Once the workflow completes successfully, the built image will be pushed to the configured container registry.
 
 ## Deployment
 
@@ -73,7 +69,7 @@ Step 14: Once the workflow completes successfully, the built image will be pushe
   images:
 	repository: ""    # defaults to Docker Hub
 	tags:
-	  amf: docker.io/iosmcnbuildtest/5gc-amf:master-latest
+	  amf: docker.io/iosmcnbuildtest/5gc-amf:release-0.0.10
 
 ```
 
