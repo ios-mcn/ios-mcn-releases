@@ -27,11 +27,11 @@ Open the grub configurations in ```etc/default/grub```
 ```sh
 $ sudo vi /etc/default/grub
 ```
-change the GRUB_CMDLINE_LINUX_DEFAULT to the following mentioned,
+change the GRUB_CMDLINE_LINUX_DEFAULT to the following mentioned, the ```0-17``` are the minimum number of CPUs required for isolation for the RAN to be run successfully.
 ```sh
 GRUB_CMDLINE_LINUX_DEFAULT="isolcpus=0-17 nohz_full=0-17 rcu_nocbs=0-17 kthread_cpus=18-31 rcu_nocb_poll nosoftlockup default_hugepagesz=1GB hugepagesz=1G hugepages=20 intel_iommu=on iommu=pt mitigations=off skew_tick=1 selinux=0 enforcing=0 tsc=reliable nmi_watchdog=0 softlockup_panic=0 audit=0 vt.handoff=7"
 ```
-and also change the GRUB_ DEFAULT to the following mentioned.
+and also change the GRUB_ DEFAULT to the following mentioned, in order to make sure that the system always boots with the realtime kernel. 
 ```sh
 GRUB _DEFAULT="Advanced options for Ubuntu>Ubuntu, with Linux 5.15.0-1032-realtime"
 ```
@@ -164,6 +164,7 @@ $ sudo ./install_dhcp_server.sh
 You can use the make commands provided in the build to install the RAN dependencies and the RAN.
 ```sh
 $ cd ~/ios-mcn-ran-distributed/
+$ make git
 $ sudo make dependency
 $ sudo make install
 ```
