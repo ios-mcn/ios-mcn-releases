@@ -63,19 +63,3 @@ Intel IA64 platforms with minimum of 4 core CPU and 16GB RAM
 | Troubleshooting Guide  | Troubleshooting guide for IOSMCN-Core | [Click here](./Troubleshooting%20Guide.md)|
 | API Guide | API guide | [Click here](./API%20Guide.md)|
 | Developer Guide | Guide for IOSMCN-Core developers | [Click Here](./Developer%20Guide.md)|
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
