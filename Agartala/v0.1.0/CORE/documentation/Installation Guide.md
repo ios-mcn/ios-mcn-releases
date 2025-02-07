@@ -1,5 +1,5 @@
 ﻿
-# IOS MCN v0.1.0 Agartala Release Installation Guide: IOSMCN-Core v0.1
+# IOS MCN v0.1.0 Agartala Release Installation Guide: IOS-MCN CORE
 
 # Introduction
 
