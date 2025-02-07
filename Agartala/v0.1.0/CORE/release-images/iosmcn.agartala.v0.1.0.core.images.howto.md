@@ -1,6 +1,6 @@
 ## This document explains how to use the pre-built images for deployment 
 
-Follow the [IOS MCN Installation Guide](../documentation/Installation%20Guide.md) document to deploy the core.
+Follow the [IOS MCN CORE Installation Guide](../documentation/Installation%20Guide.md) document to deploy the core.
 
 # Release Images
 Links to pre-built images for the release and Docker commands to pull these images are provided here
