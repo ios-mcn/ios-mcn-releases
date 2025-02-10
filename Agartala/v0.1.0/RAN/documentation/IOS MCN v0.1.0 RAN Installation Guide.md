@@ -16,6 +16,8 @@ This project aims to provide seamless integration between the RAN, SMO, and fron
 
 **Prechecks**
 
+*Note:* **Run a ``` $ sudo make dependency ``` before installing DPDK package**
+
 Ensure DPDK version available is 21.11.6. You can check this by looking at the "libdpdk-dev" package which will show the version number. 
 Key points:
 - Package name: "libdpdk-dev"
