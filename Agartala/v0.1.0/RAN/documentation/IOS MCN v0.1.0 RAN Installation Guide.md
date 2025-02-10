@@ -14,16 +14,50 @@ This project aims to provide seamless integration between the RAN, SMO, and fron
 
 ### **Usage**
 
-**Precheck**
+**Prechecks**
 
-Ensure DPDK is DPDK version available is 21.11.6. You can check this by looking at the "libdpdk-dev" package which will show the version number. 
+Ensure DPDK version available is 21.11.6. You can check this by looking at the "libdpdk-dev" package which will show the version number. 
 Key points:
 - Package name: "libdpdk-dev"
 - Version: 21.11.6
 - Distribution: Ubuntu 22.04
 
-For any additional details, refer to: "DPDK Documentation and updates" [https://www.ubuntuupdates.org/package/core/jammy/main/updates/dpdk]
+How to check the version: 
 
+**1. Using dpdk**
+```
+dpdk -l | grep libdpdk-dev
+```
+**2. Using apt**
+```
+apt list --installed | grep libdpdk-dev
+```
+or 
+```
+apt show libdpdk-dev | grep Version
+```
+This will display the installed version with other package details
+
+**3. Using pkg-config**
+If pkg-config is installed, you can check the version using
+```
+pkg-config --modversion libdpdk
+```
+**4. Using dpdk-version (If DPDK is installed)**
+If DPDK is installed, you can check the version using:
+```
+dpdk-version
+```
+or
+```
+dpdk-test --version
+```
+
+Note: DPDK is **NOT** part of IOS-MCN package, and it comes along with Ubuntu installation. IOS-MCN team is not responsible for basic package installation procedure and hence, this section will keep evolving in the interest of the general public.
+
+For any additional details, refer to: [DPDK Documentation and updates](https://www.ubuntuupdates.org/package/core/jammy/main/updates/dpdk)
+
+**Installation of IOS-MCN**
 Untar the source package from source-code folder
 
 **Prerequisites:**
