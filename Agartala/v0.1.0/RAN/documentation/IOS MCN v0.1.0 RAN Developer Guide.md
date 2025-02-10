@@ -5,13 +5,10 @@ on Radio Access Network portion. The following links are leveraged from the orig
 packages on which IOS-MCN code is built upon. 
 
 These are the links arranged as 
-- a. Reference for recommended and best practices of Open Source development
-- b. Feature Set package and its directory structure
-- c. Mostly general guidelines on how to traverse the directories and the interlinkage of various files
+- [Feature Set package, its directory structure and high level architecture](https://gitlab.eurecom.fr/oai/openairinterface5g/blob/develop/doc/FEATURE_SET.md)
+- [Reference for recommended and best practices of Open Source development from OpenAir Interface(OAI)](https://gitlab.eurecom.fr/oai/openairinterface5g/-/blob/develop/doc/README.md#developer-tools)
+- [Mostly general guidelines on how to traverse the directories and the interlinkage of various files](https://gitlab.eurecom.fr/oai/openairinterface5g/-/blob/develop/tools/formatting/README.md)
 
-Please follow the below links as references:
-- https://gitlab.eurecom.fr/oai/openairinterface5g/-/blob/develop/doc/README.md#developer-tools
-- https://gitlab.eurecom.fr/oai/openairinterface5g/blob/develop/doc/FEATURE_SET.md
-- https://gitlab.eurecom.fr/oai/openairinterface5g/-/blob/develop/tools/formatting/README.md 
+Readers are encouraged to refer to [the original documentation at Eurecom's GitLab](https://gitlab.eurecom.fr/oai/openairinterface5g/-/tree/develop/doc)
 
-Readers are encouraged to refer to the original documentation at Eurecom's GitLab. 
+Any specific support on IOS-MCN, please raise issues at [IOS-MCN Releases](https://github.com/ios-mcn/ios-mcn-releases/issues)
