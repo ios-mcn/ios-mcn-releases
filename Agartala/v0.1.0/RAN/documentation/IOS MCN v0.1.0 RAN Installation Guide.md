@@ -14,6 +14,16 @@ This project aims to provide seamless integration between the RAN, SMO, and fron
 
 ### **Usage**
 
+**Precheck**
+
+Ensure DPDK is DPDK version available is 21.11.6. You can check this by looking at the "libdpdk-dev" package which will show the version number. 
+Key points:
+- Package name: "libdpdk-dev"
+- Version: 21.11.6
+- Distribution: Ubuntu 22.04
+
+For any additional details, refer to: "DPDK Documentation and updates" [https://www.ubuntuupdates.org/package/core/jammy/main/updates/dpdk]
+
 Untar the source package from source-code folder
 
 **Prerequisites:**
