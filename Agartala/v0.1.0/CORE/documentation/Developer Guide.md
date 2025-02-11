@@ -103,11 +103,13 @@ Step 17: Once the workflow completes successfully, the built image will be pushe
 
 ## Deployment
 
-- Open IOSMCN-CoreDpm and edit iosmcn-5g-values.yaml file located in the below mentioned location.
+- If the core is not installed, follow the [installation guide](./Installation%20Guide.md).
+
+- After the core installation, open _IOSMCN-CoreDpm_ directory and edit iosmcn-5g-values.yaml file located in the below mentioned location:
 
 >IOSMCN-CoreDpm/deps/5gc/roles/core/templates/iosmcn-5g-values.yaml
 
-- Update the image name to the newly built image under the tag section of the yaml file.
+- Update the image name to the newly built image under the _tags_ section of the yaml file:
 
 ```
 5g-control-plane:
@@ -115,15 +117,50 @@ Step 17: Once the workflow completes successfully, the built image will be pushe
   images:
 	repository: ""    # defaults to Docker Hub
 	tags:
-	  amf: docker.io/iosmcnbuildtest/5gc-amf:release-0.0.10
+	  amf: docker.io/iosmcncorereg/5gc-amf:release-0.0.10
+	  smf: docker.io/iosmcncorereg/5gc-smf:release-0.0.6
+	  pcf: docker.io/iosmcncorereg/5gc-pcf:release-0.0.4
+	  nrf: docker.io/iosmcncorereg/5gc-nrf:release-0.0.5
+	  ausf: docker.io/iosmcncorereg/5gc-ausf:release-0.0.4
+	  nssf: docker.io/iosmcncorereg/5gc-nssf:release-0.0.4
+	  udm: docker.io/iosmcncorereg/5gc-udm:release-0.0.4
+	  udr: docker.io/iosmcncorereg/5gc-udr:release-0.0.4
+	  webui: docker.io/iosmcncorereg/5gc-webui:release-0.0.4
+	  metricfunc: docker.io/iosmcncorereg/metricfunc:release-0.0.4
+
+...
+
+omec-sub-provision:
+  enable: true
+  images:
+    repository: ""    # defaults to Docker Hub
+    tags:
+      simapp: docker.io/iosmcncorereg/simapp:release-0.0.3
+
+...
+
+omec-user-plane:
+  enable: true
+  nodeSelectors:
+    enabled: true
+  resources:
+    enabled: false
+  images:
+    repository: ""    # defaults to Docker Hub
+    # following two lines pull busybox from Docker Hub instead of Aether Registry
+    tags:
+      tools: omecproject/busybox:stable
+    # uncomment following section to add update bess image tag
+    tags:
+      bess: docker.io/iosmcncorereg/upf-epc-bess:release-ivybridge-0.0.4
+      pfcpiface: docker.io/iosmcncorereg/upf-epc-pfcpiface:release-ivybridge-0.0.4
 ```
 
-- Run the following command to reset the core.
-
+- If the core is installed and you want to update the pod with the new images and reset the core, run the following command:
+	_cd ~/IOSMCN-Core/iosmcn.agartala.v0.1.0.core.images/IOSMCN-CoreDpm_
 	_make aether-resetcore_
 
-- Check the pod status using the command.
-
+- Check the pod status using the command:
 	_kubectl get pods -n iosmcn_
 
 ![Figure 13: pods status](../../CORE/documentation/images/devel/fig1-pod-stats.png)

@@ -27,7 +27,7 @@ The IOSMCN-Core installation requires the following prerequisites
 
 ##  Software Prerequisites
 
-- Ubuntu 22.04 LTS Operating system
+- Ubuntu Server 22.04 LTS Operating system
 
 - Git
 
@@ -51,7 +51,7 @@ The IOSMCN-Core installation requires the following prerequisites
 
 ##   Prerequisite Installation
 
-Login to the Ubuntu 22.04.5 LTS desktop and take a terminal. The internet access is required for the machine.
+Login to the Ubuntu Server 22.04.5 LTS and take a terminal. The internet access is required for the machine.
 
 Update the repository by the command
 ```
