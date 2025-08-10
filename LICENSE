@@ -2,12 +2,10 @@
 IOS-MCN comprises of multiple open source software components with or without modifications. 
 It may have newly developed code developed specifically for a new module or a feature. 
 Please note the following key points before you start using the releases partly or fully.
- - All the newly developed code which are deployed separately will follow Apache v2.0 license. (Those code which are independent and obligation with base code licenses)
- - All other open source base code will follow its own base code licenses (the modifications/and new files along with those packages also follow the
-base licenses as per the licensing terms of the base code unless otherwise mentioned)
+ a) All the newly developed code and related documents which are deployed separately will follow Apache v2.0 license. (Those code which are independent and not governed by the base code licenses)
+ b) Other than (a), all other modules in IOS-MCN will follow its respective base code licenses. The modifications/and new files integrated with those packages also follow the base licenses as per the licensing terms of the base code unless otherwise mentioned.
 
-
-Hence, when you use IOS-MCN project for any usage, please follow the respective licenses. 
+Hence, when you use IOS-MCN project for any usage, please ensure the complete licensing terms of respective modules. 
 In case of doubt, please contact / raise an issue at https://github.com/ios-mcn/ios-mcn-releases/issues
 
 
