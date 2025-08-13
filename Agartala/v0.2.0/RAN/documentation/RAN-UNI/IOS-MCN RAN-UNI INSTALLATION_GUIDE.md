@@ -468,18 +468,22 @@ and using DPDK (Data Plane Development Kit) gives you:
 **5.2 RAN Package:**
 ----
 
- Download the tar file from the Official channel IOSMCN-RAN/SOURCE-CODE (https://github.com/ios-mcn/ios-mcn-releases-pt/tree/main/Agartala/v0.2.0/RAN/source-code)
+ Download the tar file from the Official channel IOSMCN-RAN/RELEASE-IMAGES (https://github.com/ios-mcn/ios-mcn-releases/tree/main/Agartala/v0.2.0/RAN/release-images/RAN-UNI/ios-mcn-ran-uni-baremetal-v0.2.0.tar.gz)
 
  Copy the tar file to the target gNB machine (/home/$user/).
 
 **Untar the file using cmd.**
 
  ```   
-tar -xvf iosmcn.agartala.v0.2.0.ran.source.tar
-cd iosmcn.agartala.v0.2.0.RAN.source.tar
+tar -xvzf ios-mcn-ran-uni-baremetal-v0.2.0.tar.gz
+cd final_artifact
+mkdir -p /home/ios-mcn/build_rc4/o-ran-sc-o-du-phy/fhi_lib/lib/build/  #make the exact same path
+cp libxran.so   # in this path /home/ios-mcn/build_rc4/o-ran-sc-o-du-phy/fhi_lib/lib/build/
 
  ```   
 **NOTE: Please ensure the tar file must have all the contents as shown below.**
+
+-If the tar file contains the libraries in the 'bin','lib' and 'utils' directories then you need to move all of them under the directoy 'final_artifact"
 
 *CONTENTS OF TAR PACKAGE:*
 
@@ -515,7 +519,7 @@ sudo patchelf --set-rpath <complete path to package ><artifact(nr-softmodem)
 ```
 > **Example command:**
 ```
-sudo patchelf --set-rpath ~/IOSMCN-RAN/iosmcn.agartala.v0.2.0.RAN.source.tar/openairinterface5g-0.2.0.openairinterface5g/ nr-softmodem
+sudo patchelf --set-rpath ~/final_artifact/ nr-softmodem
 ```
 > **Environment Setup or General system initial commands**
 
@@ -595,13 +599,13 @@ Figure 9 USRP B210 to gNB hardware connection diagram
 **Package Information:**
 
 **Download the tar file from the Official channel**
-(wget https://github.com/ios-mcn/ios-mcn-releases-pt/blob/main/Agartala/v0.2.0/RAN/source-code/iosmcn.agartala.v0.2.0.ran.source.tar.gz)
+(wget https://github.com/ios-mcn/ios-mcn-releases/tree/main/Agartala/v0.2.0/RAN/release-images/RAN-UNI/ios-mcn-ran-uni-baremetal-v0.2.0.tar.gz)
 
 Copy the tar file to the target gNB machine (/home/$user/) .Untar the file using cmd.
 
 ```
-tar -xvf iosmcn.agartala.v0.2.0.ran.source.tar
-cd iosmcn.agartala.v0.2.0.RAN.source.tar
+tar -xvzf ios-mcn-ran-uni-baremetal-v0.2.0.tar.gz
+cd final_artifact
 ```
 
 > In case of USRP we don't need any fronthaul binary .We just need to set the dynamic linking of the shared libraries as shared in the package.
@@ -635,9 +639,8 @@ sudo sh -c 'echo "1" > /sys/module/vfio/parameters/enable_unsafe_noiommu_mode'
 
 **After that start the nr-softmodem:**
 ```
-cd iosmcn.agartala.v0.2.0.RAN.source.tar
-cd openairinterface5g-0.2.0.openairinterface5g
-sudo taskset -c 10 ./nr-softmodem -O ./<configuration file> --sa -E --usrp-tx-thread-config 1 --thread-pool 3,4,5
+cd final_artifact
+sudo taskset -c 10 ./nr-softmodem -O ./<configuration file> --sa -E --usrp-tx-thread-config 1 --thread-pool 3,4,5   #conf filw cand be found in the Ran.source package under the openairinterfacev0.2.0/ci-scripts 
 ```
 
 **Note: The argument to run nr-softmodem binaries are different for
@@ -873,11 +876,11 @@ Figure 26	Screenshot of sysrepocfg editor showing ACTIVE status
 
 
 > After that **start the nr-softmodem**:
->
 >Run the below mentioned commands after the user have successfully configured the LPRU.
 
 ```
-cd <path_to_the_RAN_source_package>
+cd final_artifact
+
 ```
 ```
 sudo taskset -c 10 ./nr-softmodem -O ./<configuration file> --sa -reorder-thread-disable 1 --thread-pool 3,4,5,7
@@ -1013,17 +1016,19 @@ scheduling**, and **access to host devices** like NICs (/dev/bus/usb,
 /dev/net/tun, or PCI devices). That's why --privileged, --cap-add, and
 network_mode: host are typically used in the Docker config.
 
+If you face any diificulty in running the Dockerized version please refer to the Developer Guide & the Troubleshooting Guide.
+
 This process of running the RAN can be achieved by following the
 step-by-step guide mentioned below:
 
 **8.1.Load the docker image:**
 ---
 
-> **8.1.1.** Copy your UNI RAN image tar file onto the host machine.
+> **8.1.1.** Copy your RAN image tar file onto the host machine. 
 
 > **8.1.2.** Load it into Docker:
 ```
-sudo docker load -i /path/to/uni-ran-gnb.tar
+sudo docker load -i /path/to/ran-gnb.tar
 ```
 > **8.1.3.** Verify it's loaded
 ```
