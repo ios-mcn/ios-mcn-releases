@@ -59,41 +59,41 @@ The guide assumes basic familiarity with Linux systems, networking, and radio te
 **LIST OF FIGURES**
 --
 
->| **Figure No.** | **Description**                                                                 | **Page** |
->|----------------|----------------------------------------------------------------------------------|----------|
->| Figure 1       | Device-level BIOS configuration for RAN optimization                            | 8        |
->| Figure 2       | Extreme Memory Profile BIOS setting                                              | 8        |
->| Figure 3       | BIOS setting showing VT-d enabled                                                | 9        |
->| Figure 4       | SR-IOV output page showing enabled virtualization support                        | 10       |
->| Figure 5       | Intel® Ethernet Network Adapter E810 details                                     | 13       |
->| Figure 6       | Extracted contents of the RAN software tar package                               | 20       |
->| Figure 7       | Output of /proc/cmdline showing kernel boot parameters                           | 20       |
->| Figure 8       | Output of cpupower frequency-info for CPU frequency settings                     | 20       |
->| Figure 9       | USRP B210 to gNB hardware connection diagram                                     | 21       |
->| Figure 10      | Contents of the test.sh script for system initialization                         | 22       |
->| Figure 11      | Route creation output after running test.sh script                               | 23       |
->| Figure 12      | Running VF configuration script with user privileges                             | 24       |
->| Figure 13      | Details of vf.sh script for DPDK and VF setup                                    | 24       |
->| Figure 14      | Output of `ip link show` displaying virtual function interfaces                  | 25       |
->| Figure 15      | Script contents for slave PTP configuration (`slave-enp2s0fo.sh`)                | 26       |
->| Figure 16      | Output after executing slave PTP configuration script                            | 27       |
->| Figure 17      | Script contents for master PTP configuration (`master-enp2s0f1.sh`)              | 28       |
->| Figure 18      | Output of master PTP script to sync LPRU via gNB                                 | 28       |
->| Figure 19      | Script for `phc2sys-master` to sync system and hardware clocks                   | 29       |
->| Figure 20      | Output of `phc2sys-master` script                                                 | 29       |
->| Figure 21      | Logging into LPRU terminal                                                       | 30       |
->| Figure 22      | LPRU synchronization confirmation in terminal                                    | 31       |
->| Figure 23      | XML parser configuration script for LPRU (`e_2x2.xml`)                           | 32       |
->| Figure 24      | Output after parsing LPRU configuration XML                                      | 32       |
->| Figure 25      | Memory register write command run in LPRU terminal                               | 33       |
->| Figure 26      | Screenshot of `sysrepocfg` editor showing ACTIVE status                          | 33       |
->| Figure 27      | gNB registration log indicating RAN startup success                              | 34       |
->| Figure 28      | Kubernetes pod watch output for core network validation                          | 35       |
->| Figure 29      | Checking gNB configuration file parameters before launch                         | 36       |
->| Figure 30      | Selecting the private 5G carrier on UE                                           | 37       |
->| Figure 31      | Removing airplane mode on UE to initiate attach procedure                        | 37       |
->| Figure 32      | Console log on gNB indicating UE attach success                                  | 38       |
->| Figure 33      | AMF terminal log showing UE attachment and core interaction                      | 38       |
+>| **Figure No.** | **Description**                                                                 | 
+>|----------------|----------------------------------------------------------------------------------|
+>| Figure 1       | Device-level BIOS configuration for RAN optimization                            |         
+>| Figure 2       | Extreme Memory Profile BIOS setting                                              |        
+>| Figure 3       | BIOS setting showing VT-d enabled                                                |        
+>| Figure 4       | SR-IOV output page showing enabled virtualization support                        |       
+>| Figure 5       | Intel® Ethernet Network Adapter E810 details                                     |3       
+>| Figure 6       | Extracted contents of the RAN software tar package                               | 
+>| Figure 7       | Output of /proc/cmdline showing kernel boot parameters                           |
+>| Figure 8       | Output of cpupower frequency-info for CPU frequency settings                     | 
+>| Figure 9       | USRP B210 to gNB hardware connection diagram                                     | 
+>| Figure 10      | Contents of the test.sh script for system initialization                         |
+>| Figure 11      | Route creation output after running test.sh script                               |
+>| Figure 12      | Running VF configuration script with user privileges                             |
+>| Figure 13      | Details of vf.sh script for DPDK and VF setup                                    |
+>| Figure 14      | Output of `ip link show` displaying virtual function interfaces                  |
+>| Figure 15      | Script contents for slave PTP configuration (`slave-enp2s0fo.sh`)                |
+>| Figure 16      | Output after executing slave PTP configuration script                            |
+>| Figure 17      | Script contents for master PTP configuration (`master-enp2s0f1.sh`)              | 
+>| Figure 18      | Output of master PTP script to sync LPRU via gNB                                 |
+>| Figure 19      | Script for `phc2sys-master` to sync system and hardware clocks                   | 
+>| Figure 20      | Output of `phc2sys-master` script                                                 | 
+>| Figure 21      | Logging into LPRU terminal                                                       |
+>| Figure 22      | LPRU synchronization confirmation in terminal                                    | 
+>| Figure 23      | XML parser configuration script for LPRU (`e_2x2.xml`)                           | 
+>| Figure 24      | Output after parsing LPRU configuration XML                                      |
+>| Figure 25      | Memory register write command run in LPRU terminal                               |
+>| Figure 26      | Screenshot of `sysrepocfg` editor showing ACTIVE status                          | 
+>| Figure 27      | gNB registration log indicating RAN startup success                              | 
+>| Figure 28      | Kubernetes pod watch output for core network validation                          |
+>| Figure 29      | Checking gNB configuration file parameters before launch                         | 
+>| Figure 30      | Selecting the private 5G carrier on UE                                           |
+>| Figure 31      | Removing airplane mode on UE to initiate attach procedure                        |
+>| Figure 32      | Console log on gNB indicating UE attach success                                  |
+>| Figure 33      | AMF terminal log showing UE attachment and core interaction                      | 
 ---
 
 **CHAPTER-1**
@@ -468,18 +468,20 @@ and using DPDK (Data Plane Development Kit) gives you:
 **5.2 RAN Package:**
 ----
 
- Download the tar file from the Official channel IOSMCN-RAN/SOURCE-CODE (https://github.com/ios-mcn/ios-mcn-releases-pt/tree/main/Agartala/v0.2.0/RAN/source-code)
+ Download the tar file from the Official channel IOSMCN-RAN/RELEASE-IMAGES (https://github.com/ios-mcn/ios-mcn-releases/tree/main/Agartala/v0.2.0/RAN/release-images/RAN-UNI/ios-mcn-ran-uni-baremetal-v0.2.0.tar.gz)
 
  Copy the tar file to the target gNB machine (/home/$user/).
 
 **Untar the file using cmd.**
 
  ```   
-tar -xvf iosmcn.agartala.v0.2.0.ran.source.tar
-cd iosmcn.agartala.v0.2.0.RAN.source.tar
+tar -xvzf ios-mcn-ran-uni-baremetal-v0.2.0.tar.gz
+cd final_artifact
 
  ```   
 **NOTE: Please ensure the tar file must have all the contents as shown below.**
+
+-If the tar package contains the files in the 'bin','lib' and 'utils' directories then you need to move all of them under the directoy 'final_artifact"
 
 *CONTENTS OF TAR PACKAGE:*
 
@@ -505,7 +507,9 @@ Figure 6	Extracted contents of the RAN software tar package
 
  Firstly, copy the **libxran.so** file to the **/usr/local/lib/**
 ```
-sudo cp libxran.so /usr/local/lib/
+mkdir -p /home/ios-mcn/build_rc4/o-ran-sc-o-du-phy/fhi_lib/lib/build/  #make the exact same path
+cp libxran.so   # in this path /home/ios-mcn/build_rc4/o-ran-sc-o-du-phy/fhi_lib/lib/build/
+
 ```
 
 Set the shared library linking using utility patchelf . You can install this utility using cmd.
@@ -515,7 +519,7 @@ sudo patchelf --set-rpath <complete path to package ><artifact(nr-softmodem)
 ```
 > **Example command:**
 ```
-sudo patchelf --set-rpath ~/IOSMCN-RAN/iosmcn.agartala.v0.2.0.RAN.source.tar/openairinterface5g-0.2.0.openairinterface5g/ nr-softmodem
+sudo patchelf --set-rpath ~/final_artifact/ nr-softmodem
 ```
 > **Environment Setup or General system initial commands**
 
@@ -595,13 +599,13 @@ Figure 9 USRP B210 to gNB hardware connection diagram
 **Package Information:**
 
 **Download the tar file from the Official channel**
-(wget https://github.com/ios-mcn/ios-mcn-releases-pt/blob/main/Agartala/v0.2.0/RAN/source-code/iosmcn.agartala.v0.2.0.ran.source.tar.gz)
+(wget https://github.com/ios-mcn/ios-mcn-releases/tree/main/Agartala/v0.2.0/RAN/release-images/RAN-UNI/ios-mcn-ran-uni-baremetal-v0.2.0.tar.gz)
 
 Copy the tar file to the target gNB machine (/home/$user/) .Untar the file using cmd.
 
 ```
-tar -xvf iosmcn.agartala.v0.2.0.ran.source.tar
-cd iosmcn.agartala.v0.2.0.RAN.source.tar
+tar -xvzf ios-mcn-ran-uni-baremetal-v0.2.0.tar.gz
+cd final_artifact
 ```
 
 > In case of USRP we don't need any fronthaul binary .We just need to set the dynamic linking of the shared libraries as shared in the package.
@@ -635,9 +639,8 @@ sudo sh -c 'echo "1" > /sys/module/vfio/parameters/enable_unsafe_noiommu_mode'
 
 **After that start the nr-softmodem:**
 ```
-cd iosmcn.agartala.v0.2.0.RAN.source.tar
-cd openairinterface5g-0.2.0.openairinterface5g
-sudo taskset -c 10 ./nr-softmodem -O ./<configuration file> --sa -E --usrp-tx-thread-config 1 --thread-pool 3,4,5
+cd final_artifact
+sudo taskset -c 10 ./nr-softmodem -O ./<configuration file> --sa -E --usrp-tx-thread-config 1 --thread-pool 3,4,5   #conf file cand be found in the Ran.source package under the openairinterfacev0.2.0/ci-scripts 
 ```
 
 **Note: The argument to run nr-softmodem binaries are different for
@@ -873,11 +876,11 @@ Figure 26	Screenshot of sysrepocfg editor showing ACTIVE status
 
 
 > After that **start the nr-softmodem**:
->
 >Run the below mentioned commands after the user have successfully configured the LPRU.
 
 ```
-cd <path_to_the_RAN_source_package>
+cd final_artifact
+
 ```
 ```
 sudo taskset -c 10 ./nr-softmodem -O ./<configuration file> --sa -reorder-thread-disable 1 --thread-pool 3,4,5,7
@@ -1013,17 +1016,19 @@ scheduling**, and **access to host devices** like NICs (/dev/bus/usb,
 /dev/net/tun, or PCI devices). That's why --privileged, --cap-add, and
 network_mode: host are typically used in the Docker config.
 
+If you face any diificulty in running the Dockerized version please refer to the Developer Guide & the Troubleshooting Guide.
+
 This process of running the RAN can be achieved by following the
 step-by-step guide mentioned below:
 
 **8.1.Load the docker image:**
 ---
 
-> **8.1.1.** Copy your UNI RAN image tar file onto the host machine.
+> **8.1.1.** Copy your RAN image tar file onto the host machine. 
 
 > **8.1.2.** Load it into Docker:
 ```
-sudo docker load -i /path/to/uni-ran-gnb.tar
+sudo docker load -i /path/to/ran-gnb.tar
 ```
 > **8.1.3.** Verify it's loaded
 ```

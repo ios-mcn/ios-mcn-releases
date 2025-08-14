@@ -147,22 +147,6 @@ This brings up a Kubernetes cluster, deploy a 5G version of IOSMCN-Core on that 
 
 ### Target Parameter Settings
 
-#### Clone the Helm Chart
-
-```
-git clone https://github.com/ios-mcn-core/ios-mcn-core-helm-chart.git
-cd ios-mcn-core-helm-chart
-git checkout tags/v0.2.0
-```
-
-#### Clone the Ansible Chart
-
-```
-git clone --recursive https://github.com/ios-mcn-core/IOSMCN-CoreDpm.git
-cd IOSMCN-CoreDpm
-git checkout tags/ios-mcn-core-rel0.2.0
-```
-
 #### Update Configuration Files
 
 ##### Update the hosts.ini
@@ -413,8 +397,8 @@ Replace \<mac-address-access\> and \<mac-address-core\> with the actual MAC addr
 
 | **Document Name**     | **Purpose**                           | **Link**                                   |
 | --------------------- | ------------------------------------- | ------------------------------------------ |
-| Developer Guide       | Guide for IOSMCN-Core developers      | [Click Here](./IOS-MCN%20CORE%20Developer%20Guide.md)       |
-| User Guide            | Quick user guide                      | [Click Here](./IOS-MCN%20CORE%20User%20Guide.md)            |
-| API Guide             | API guide                             | [Click here](./IOS-MCN%20CORE%20API%20Guide.md)             |
-| Troubleshooting Guide | Troubleshooting guide for IOSMCN-Core | [Click here](./IOS-MCN%20CORE%20Troubleshooting%20Guide.md) |
-| Installation Guide    | Installation of IOSMCN-Core           | [Click here](./IOS-MCN%20CORE%20Installation%20Guide.md)    |
+| Developer Guide       | Guide for IOSMCN-Core developers      | [Click Here](./Developer%20Guide.md)       |
+| User Guide            | Quick user guide                      | [Click Here](./User%20Guide.md)            |
+| API Guide             | API guide                             | [Click here](./API%20Guide.md)             |
+| Troubleshooting Guide | Troubleshooting guide for IOSMCN-Core | [Click here](./Troubleshooting%20Guide.md) |
+| Installation Guide    | Installation of IOSMCN-Core           | [Click here](./Installation%20Guide.md)    |
