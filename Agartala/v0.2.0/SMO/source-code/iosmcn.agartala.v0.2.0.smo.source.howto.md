@@ -23,13 +23,19 @@ Step 3: Ensure the system is ready for OAM deployment.
 
 Please refer to the pre-requisites section in the OAM deployment guide that is part of the SMO documentation.
 
-Step 4: Deploy OAM
+Step 4: Adapt to this release (this step applies only to the 0.2.0 release)
+
+```sh
+sed -i -e 's/ios-mcn-smo/ios-mcn/g' -e 's/1.2.2/1.2.1/g' .env
+```
+
+Step 5: Deploy OAM
 
 Please refer to the Usage section in the OAM deployment guide that is part of the SMO documentation.
 You need to run just 2 commands
 
 ```sh
-python3 adapt-to-environment.py --i <IP-ADDR-OF-THE-SYSTEM> --d <DOMAIN-NAME>
+python3 adapt_to_environment.py --i <IP-ADDR-OF-THE-SYSTEM> --d <DOMAIN-NAME>
 ./docker-setup.sh
 ```
 
