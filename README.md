@@ -1,7 +1,7 @@
 # Attention!
 Please report the issues and feedback about all IOS-MCN releases only through [IOS-MCN-Releases github issues here](https://github.com/ios-mcn/ios-mcn-releases/issues)!
 
-[<img width="1850" height="600" alt="IOS-MCN Agartala Release GitHub Issue Banner" src="https://github.com/user-attachments/assets/16b3fbb8-6056-4589-bbca-70dae56f66ef" />](https://github.com/ios-mcn/ios-mcn-releases)
+[<img width="1850" height="600" alt="IOS-MCN Agartala Release GitHub Issue Banner" src="https://github.com/user-attachments/assets/16b3fbb8-6056-4589-bbca-70dae56f66ef" />](https://github.com/ios-mcn/ios-mcn-releases/issues)
 
 
 # IOS-MCN Releases
