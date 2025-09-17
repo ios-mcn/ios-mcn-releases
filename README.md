@@ -1,3 +1,8 @@
+# Attention!
+Please report the issues and feedback about all IOS-MCN releases only through [IOS-MCN-Releases github issues here](https://github.com/ios-mcn/ios-mcn-releases/issues)!
+<img width="1850" height="600" alt="IOS-MCN Agartala Release GitHub Issue Banner" src="https://github.com/user-attachments/assets/16b3fbb8-6056-4589-bbca-70dae56f66ef" />
+
+
 # IOS-MCN Releases
 IOS-MCN (Indian Open Source for Mobile Communication Networks) provides a neutral, democratic, and trusted platform for the translation of 5G innovation and research into commercially deployable Open Source software.
 
