@@ -242,6 +242,17 @@ sudo ip link set dev <interface> mtu 1460
 -	Common Solutions:
 Ensure that the DNS IP is correctly configured in the YAML file located in /etc/netplan/. If no DNS is available on the network, use 8.8.8.8 as the DNS IP.
 
+### Error/Issue 32
+- Issue Title: ImagePullBackOff for private/public container images
+- Description: Invalid or expired registry credentials in containerd
+- Common Solutions:
+The config.json file stores Docker/GHCR registry authentication credentials. If it contains invalid or expired tokens (for example, from a previous docker login using an old PAT), containerd will attempt to use them, causing image pull failures.
+Reload containerd by restarting the RKE2 server:
+```
+sudo rm -f /root/.docker/config.json
+sudo systemctl restart rke2-server
+```
+
 ##	Frequently Asked Questions
 ###	What is the minimum hardware requirement for installing IOSMCN-Core?
 The core software requires at least 4 CPU cores and 16GB RAM memory to installation.
