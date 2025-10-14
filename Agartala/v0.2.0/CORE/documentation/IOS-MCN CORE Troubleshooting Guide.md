@@ -15,7 +15,7 @@ This document envisages a developer or user to solve the error or issues may fac
 ###	Error/Issue 1
 -	Issue Title: Data sent error
 -	Description: Data could not be sent to remote host
--	Common Solutions: Update ansible.cfg in aether-onramp with following replacement 
+-	Common Solutions: Update ansible.cfg in IOSMCN-CoreDpm with following replacement 
  *#pipelining = True*
 ###	Error/Issue 2:
 -	Issue Title: ansible include removed 
@@ -88,7 +88,6 @@ kubectl describe pod <podname> -n <namespace>
 ```
 kubectl -n iosmcn get pods	
 kubectl get pods --all-namespaces -o wide (Displays IP address details also)
-kubectl -n aether-roc get pods	
 kubectl logs pod-name -n iosmcn (To get logs from a pod)
 ```
 ###	Error/Issue 12

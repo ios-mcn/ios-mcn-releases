@@ -202,7 +202,7 @@ Start installation with the command
 
 ```
 cd IOSMCN-CoreDpm
-make aether-k8s-install
+make iosmcn-k8s-install
 ```
 
 This may take several minutes to complete the installation. On its completion, verify the installation status by the command
@@ -222,7 +222,7 @@ Figure 2: Output of Kubernetes installation
 Initiate the installation by the command
 
 ```
-make aether-5gc-install
+make iosmcn-5gc-install
 ```
 
 The successful outcome shall be verified using the following command
