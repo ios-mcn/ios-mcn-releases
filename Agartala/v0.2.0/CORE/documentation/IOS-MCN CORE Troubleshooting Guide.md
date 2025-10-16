@@ -15,7 +15,7 @@ This document envisages a developer or user to solve the error or issues may fac
 ###	Error/Issue 1
 -	Issue Title: Data sent error
 -	Description: Data could not be sent to remote host
--	Common Solutions: Update ansible.cfg in aether-onramp with following replacement 
+-	Common Solutions: Update ansible.cfg in IOSMCN-CoreDpm with following replacement 
  *#pipelining = True*
 ###	Error/Issue 2:
 -	Issue Title: ansible include removed 
@@ -88,7 +88,6 @@ kubectl describe pod <podname> -n <namespace>
 ```
 kubectl -n iosmcn get pods	
 kubectl get pods --all-namespaces -o wide (Displays IP address details also)
-kubectl -n aether-roc get pods	
 kubectl logs pod-name -n iosmcn (To get logs from a pod)
 ```
 ###	Error/Issue 12
@@ -241,6 +240,17 @@ sudo ip link set dev <interface> mtu 1460
 -	Description: Set the proper DNS IP
 -	Common Solutions:
 Ensure that the DNS IP is correctly configured in the YAML file located in /etc/netplan/. If no DNS is available on the network, use 8.8.8.8 as the DNS IP.
+
+### Error/Issue 32
+- Issue Title: ImagePullBackOff for private/public container images
+- Description: Invalid or expired registry credentials in containerd
+- Common Solutions:
+The config.json file stores Docker/GHCR registry authentication credentials. If it contains invalid or expired tokens (for example, from a previous docker login using an old PAT), containerd will attempt to use them, causing image pull failures.
+Reload containerd by restarting the RKE2 server:
+```
+sudo rm -f /root/.docker/config.json
+sudo systemctl restart rke2-server
+```
 
 ##	Frequently Asked Questions
 ###	What is the minimum hardware requirement for installing IOSMCN-Core?

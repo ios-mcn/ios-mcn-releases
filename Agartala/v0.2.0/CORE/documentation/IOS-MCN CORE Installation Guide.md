@@ -138,9 +138,9 @@ sudo netplan apply
 Download file [iosmcn.agartala.v0.2.0.core.images.tar.gz](../release-images/iosmcn.agartala.v0.2.0.core.images.tar.gz) to the directory.
 
 ```
-wget https://github.com/ios-mcn/ios-mcn-releases/raw/refs/heads/main/Agartala/v0.2.0/CORE/release-images/iosmcn.agartala.v0.2.0.core.images.tar.gz
+wget https://github.com/ios-mcn/ios-mcn-releases/blob/main/Agartala/v0.2.0/CORE/release-images/iosmcn.agartala.v0.2.0.core.images.tar.gz
 tar -xvzf iosmcn.agartala.v0.2.0.core.images.tar.gz
-cd iosmcn.agartala.v0.2.0.core.images/IOSMCN-CoreDpm
+cd IOSMCN-CoreDpm
 ```
 
 This brings up a Kubernetes cluster, deploy a 5G version of IOSMCN-Core on that cluster, and then connect that IOSMCN-Core to either an emulated 5G RAN or physical RAN.
@@ -202,7 +202,7 @@ Start installation with the command
 
 ```
 cd IOSMCN-CoreDpm
-make aether-k8s-install
+make iosmcn-k8s-install
 ```
 
 This may take several minutes to complete the installation. On its completion, verify the installation status by the command
@@ -222,7 +222,7 @@ Figure 2: Output of Kubernetes installation
 Initiate the installation by the command
 
 ```
-make aether-5gc-install
+make iosmcn-5gc-install
 ```
 
 The successful outcome shall be verified using the following command

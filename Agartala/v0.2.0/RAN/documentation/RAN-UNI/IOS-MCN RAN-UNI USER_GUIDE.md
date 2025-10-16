@@ -149,8 +149,14 @@ Figure#: USRP B210 to gNB hardware connection diagram
 After that start the nr-softmodem:
 
 ```
- cd <v.0.0.X.baremetal.tar.gz>
-
+ untar release image file as tar -xzvf v.0.0.X.baremetal.tar.gz
+ cd v.0.0.X.baremetal
+ cd final_artifact
+ mv bin/* .
+ mv lib/* .
+ mv utils/* .
+ Set patchelf path if required
+ Execute gNB binary as follows:
  sudo taskset -c 10 ./nr-softmodem -O ./<configuration file> --sa -E --usrp-tx-thread-config 1 --thread-pool 3,4,5
 ```
 

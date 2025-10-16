@@ -35,6 +35,22 @@ vi .env
 |nonrtric-plt-informationcoordinatorservice|https://github.com/orgs/ios-mcn/packages/container/package/nonrtric-plt-informationcoordinatorservice|docker pull ghcr.io/ios-mcn/nonrtric-plt-informationcoordinatorservice:1.5.1|
 |ves-collector|https://github.com/orgs/ios-mcn/packages/container/package/ves-collector|docker pull ghcr.io/ios-mcn/ves-collector:1.12.4|
 |nonrtric-plt-pmlog|https://github.com/orgs/ios-mcn/packages/container/package/nonrtric-plt-pmlog|docker pull ghcr.io/ios-mcn/nonrtric-plt-pmlog:1.0.1|
+|onap/sdnc-image|https://github.com/orgs/ios-mcn/packages/container/package/onap/sdnc-image|docker pull ghcr.io/ios-mcn/onap/sdnc-image:3.0.3-snapshot-latest|
+|onap/sdnc-web-image|https://github.com/orgs/ios-mcn/packages/container/package/onap/sdnc-web-image|docker pull ghcr.io/ios-mcn/onap/sdnc-web-image:3.0.3-snapshot-latest|
+|tabx|https://github.com/orgs/ios-mcn/packages/container/package/tabx|docker pull ghcr.io/ios-mcn/tabx:1.0|
+|nonrtric-plt-rappcatalogue-enhanced|https://github.com/orgs/ios-mcn/packages/container/package/nonrtric-plt-rappcatalogue-enhanced|docker pull ghcr.io/ios-mcn/nonrtric-plt-rappcatalogue-enhanced:1.2.0|
+|pm-rapp|https://github.com/orgs/ios-mcn/packages/container/package/pm-rapp|docker pull ghcr.io/ios-mcn/pm-rapp:1.0|
+|nonrtric-plt-dmaapmediatorproducer|https://github.com/orgs/ios-mcn/packages/container/package/nonrtric-plt-dmaapmediatorproducer|docker pull ghcr.io/ios-mcn/nonrtric-plt-dmaapmediatorproducer:1.2.0|
+|ric-plt-e2mgr|https://github.com/orgs/ios-mcn/packages/container/package/ric-plt-e2mgr|docker pull ghcr.io/ios-mcn/ric-plt-e2mgr:6.0.4|
+|ric-plt-a1|https://github.com/orgs/ios-mcn/packages/container/package/ric-plt-a1|docker pull ghcr.io/ios-mcn/ric-plt-a1:3.2.2|
+|ric-plt-dbaas|https://github.com/orgs/ios-mcn/packages/container/package/ric-plt-dbaas|docker pull ghcr.io/ios-mcn/ric-plt-dbaas:0.6.4|
+|ric-plt-e2|https://github.com/orgs/ios-mcn/packages/container/package/ric-plt-e2|docker pull ghcr.io/ios-mcn/ric-plt-e2:6.0.4|
+|onap/ccsdk-odlsli-alpine-image|https://github.com/orgs/ios-mcn/packages/container/package/onap/ccsdk-odlsli-alpine-image|docker pull ghcr.io/ios-mcn/onap/ccsdk-odlsli-alpine-image:1.7.1-snapshot-latest|
+|rtmgr-sim|https://github.com/orgs/ios-mcn/packages/container/package/rtmgr-sim|docker pull ghcr.io/ios-mcn/rtmgr-sim:i-release|
+|ric-plt-appmgr|https://github.com/orgs/ios-mcn/packages/container/package/ric-plt-appmgr|docker pull ghcr.io/ios-mcn/ric-plt-appmgr:0.5.7|
+|sa-rapp|https://github.com/orgs/ios-mcn/packages/container/package/sa-rapp|docker pull ghcr.io/ios-mcn/sa-rapp:1.0|
+|oru-rapp|https://github.com/orgs/ios-mcn/packages/container/package/oru-rapp|docker pull ghcr.io/ios-mcn/oru-rapp:1.0|
+|ric-plt-submgr|https://github.com/orgs/ios-mcn/packages/container/package/ric-plt-submgr|docker pull ghcr.io/ios-mcn/ric-plt-submgr:0.10.1|
 
 ### Building custom images and using it.
 
