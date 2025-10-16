@@ -140,7 +140,7 @@ Download file [iosmcn.agartala.v0.2.0.core.images.tar.gz](../release-images/iosm
 ```
 wget https://github.com/ios-mcn/ios-mcn-releases/raw/refs/heads/main/Agartala/v0.2.0/CORE/release-images/iosmcn.agartala.v0.2.0.core.images.tar.gz
 tar -xvzf iosmcn.agartala.v0.2.0.core.images.tar.gz
-cd IOSMCN-CoreDpm
+cd iosmcn.agartala.v0.2.0.core.images/IOSMCN-CoreDpm
 ```
 
 This brings up a Kubernetes cluster, deploy a 5G version of IOSMCN-Core on that cluster, and then connect that IOSMCN-Core to either an emulated 5G RAN or physical RAN.
