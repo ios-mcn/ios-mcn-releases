@@ -6,7 +6,7 @@ In the OAM source code, you will find .env file. Currently, the .env file alread
 
 Step 1 : Unzip the SMO/OAM source code
 
-Download the [SMO Source](https://github.com/ios-mcn/ios-mcn-releases/blob/main/Agartala/v0.2.0/SMO/source-code/iosmcn.agartala.v0.2.0.smo.source.tar.gz)
+Download the [SMO Source](https://github.com/ios-mcn/ios-mcn-releases/blob/main/Agartala/v0.2.0/SMO/source-code/iosmcn.agartala.v0.2.0.smo.source.tar)
 
 ```sh
 tar -xvzf iosmcn.agartala.v0.2.0.smo.source.tar.gz
