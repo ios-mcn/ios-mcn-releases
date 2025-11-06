@@ -8,7 +8,7 @@ This guide explains how to install and run the **P-CSCF** module either via Dock
 ## Docker-Based Installation
 
 ### Step 1: Build Docker Image
-[Refer](./pcscf-developer-guide.md)
+[Refer](https://github.com/ios-mcn/ios-mcn-releases/blob/main/Agartala/v0.3.0/IMS/documentation/IOS-MCN%20IMS-pcscf-developer-guide.md)
 
 ### Step 2: Run Container
 
@@ -65,7 +65,7 @@ sudo docker build -t pcscf .
 ## Bare Metal Installation
 
 ### Step 1: Build the Project
-[Refer](./pcscf-developer-guide.md)
+[Refer](https://github.com/ios-mcn/ios-mcn-releases/blob/main/Agartala/v0.3.0/IMS/documentation/IOS-MCN%20IMS-pcscf-developer-guide.md)
 
 ### Step 2: Prepare Deployment
 

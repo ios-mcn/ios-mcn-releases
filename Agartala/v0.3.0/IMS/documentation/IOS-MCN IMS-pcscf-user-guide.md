@@ -9,9 +9,9 @@ The Proxy-Call Session Control Function (P-CSCF) module is a critical component 
 
 ### Building, Configuration and Installation
 
-Refer this for [deployment and configuration](./pcscf-developer-guide.md)
+Refer this for [deployment and configuration](https://github.com/ios-mcn/ios-mcn-releases/blob/main/Agartala/v0.3.0/IMS/documentation/IOS-MCN%20IMS-pcscf-developer-guide.md)
 
-Refer this for [installation](./pcscf-installation-guide.md)
+Refer this for [installation](https://github.com/ios-mcn/ios-mcn-releases/blob/main/Agartala/v0.3.0/IMS/documentation/IOS-MCN%20IMS-pcscf-installation-guide.md)
 
 ---
 

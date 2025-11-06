@@ -422,8 +422,8 @@ Replace \<mac-address-access\> and \<mac-address-core\> with the actual MAC addr
 
 | **Document Name**     | **Purpose**                           | **Link**                                   |
 | --------------------- | ------------------------------------- | ------------------------------------------ |
-| Developer Guide       | Guide for IOSMCN-Core developers      | [Click Here](./Developer%20Guide.md)       |
-| User Guide            | Quick user guide                      | [Click Here](./User%20Guide.md)            |
-| API Guide             | API guide                             | [Click here](./API%20Guide.md)             |
-| Troubleshooting Guide | Troubleshooting guide for IOSMCN-Core | [Click here](./Troubleshooting%20Guide.md) |
-| Installation Guide    | Installation of IOSMCN-Core           | [Click here](./Installation%20Guide.md)    |
+| Developer Guide       | Guide for IOSMCN-Core developers      | [Click Here](https://github.com/ios-mcn/ios-mcn-releases/blob/main/Agartala/v0.3.0/CORE/documentation/IOS-MCN%20CORE%20Developer%20Guide.md)       |
+| User Guide            | Quick user guide                      | [Click Here](https://github.com/ios-mcn/ios-mcn-releases/blob/main/Agartala/v0.3.0/CORE/documentation/IOS-MCN%20CORE%20User%20Guide.md)            |
+| API Guide             | API guide                             | [Click here](https://github.com/ios-mcn/ios-mcn-releases/blob/main/Agartala/v0.3.0/CORE/documentation/IOS-MCN%20CORE%20API%20Guide.md)             |
+| Troubleshooting Guide | Troubleshooting guide for IOSMCN-Core | [Click here](https://github.com/ios-mcn/ios-mcn-releases/blob/main/Agartala/v0.3.0/CORE/documentation/IOS-MCN%20CORE%20Troubleshooting%20Guide.md) |
+| Installation Guide    | Installation of IOSMCN-Core           | [Click here](https://github.com/ios-mcn/ios-mcn-releases/blob/main/Agartala/v0.3.0/CORE/documentation/IOS-MCN%20CORE%20Installation%20Guide.md)    |

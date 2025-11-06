@@ -35,12 +35,12 @@ All the parameters listed below must be **hardcoded into the `Dockerfile`** befo
 
 ## 3. Build Instructions
 
-[Refer this document](./n5-developer-guide.md)
+[Refer this document](https://github.com/ios-mcn/ios-mcn-releases/blob/main/Agartala/v0.3.0/IMS/documentation/IOS-MCN%20IMS-n5-developer-guide.md)
 
 
 ## 4. Running the N5 Service
 
-[Refer this document](./n5-installation-guide.md)
+[Refer this document](https://github.com/ios-mcn/ios-mcn-releases/blob/main/Agartala/v0.3.0/IMS/documentation/IOS-MCN%20IMS-n5-installation-guide.md)
 
 
 ## 5. Health Check and Logs
@@ -73,4 +73,4 @@ Use tools like `curl` or Postman to send test HTTP2 requests (if TLS is configur
 https://<AF-BIND-IP>:<AF-BIND-PORT>/n5/<resource>
 ```
 
-The API guide, along with API responses can be found [here](./n5-api-guide.md)
+The API guide, along with API responses can be found [here](https://github.com/ios-mcn/ios-mcn-releases/blob/main/Agartala/v0.3.0/IMS/documentation/IOS-MCN%20IMS-n5-api-guide.md)

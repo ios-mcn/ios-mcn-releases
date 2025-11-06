@@ -8,7 +8,7 @@ This guide will help you install and run the **IOS-MCN-N5 v0.3.0** using Docker.
 ## Prerequisites
 
 - Docker installed on your system.  
-- Already built `n5-service` image [Refer here](./n5-developer-guide.md)
+- Already built `n5-service` image [Refer here](https://github.com/ios-mcn/ios-mcn-releases/blob/main/Agartala/v0.3.0/IMS/documentation/IOS-MCN%20IMS-n5-developer-guide.md)
 
 ---
 
