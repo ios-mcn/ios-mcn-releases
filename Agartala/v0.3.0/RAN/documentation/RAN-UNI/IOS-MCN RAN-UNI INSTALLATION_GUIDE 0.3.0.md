@@ -792,11 +792,11 @@ Once you are logged in, Follow the below provided steps to sync up the LPRU, thi
 >
  
 ```
-tail -f/var/logs/synctiming2.log| grep sync
+tail -f/var/log/synctimingptp2.log| grep sync
 ```
 **We will wait until the unit synchronizes.**
 
-- This command continuously monitors (tail -f) the **synctiming2.log**
+- This command continuously monitors (tail -f) the **synctimingptp2.log**
 file and filters out lines that contain the word sync. You're
 essentially waiting and watching until a synchronization message
 appears in the log.
@@ -896,7 +896,7 @@ sudo taskset -c 10 ./nr-softmodem -O ./<configuration file> --sa -reorder-thread
 Before configuring the LPRU we need to run the following commands to make our system(gNB) ready on a configuration level and to synchronize the clocks with respect to the Grandmaster switch which provides 
 GPS signals.
 
-![](../../documentation/RAN-UNI/images/ran_installation/lekha_structure_diagram.png)
+![](../../documentation/RAN-UNI/images/ran_installation/lekha_structure_diagram_new.jpeg)
 
  Figure: Lekha MaRut LPRU Connecttion Diagram.
 
@@ -1145,11 +1145,13 @@ step-by-step guide mentioned below:
 **8.1.Load the docker image:**
 ---
 
-> **8.1.1.** Copy your RAN image tar file onto the host machine. 
-
-> **8.1.2.** Load it into Docker:
+> **8.1.1.** **Pulling the docker image for Split 8 architecture** 
 ```
-sudo docker load -i /path/to/ran-gnb.tar
+sudo docker pull ghcr.io/ios-mcn/ran-gnb-uni:v0.2.1.rc4
+```
+> **8.1.2.** **Pulling the docker image for Split 7.2 architecture** 
+```
+sudo docker pull ghcr.io/ios-mcn/ran-gnb-fhi72-uni:v0.2.1.rc4
 ```
 > **8.1.3.** Verify it's loaded
 ```
