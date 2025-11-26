@@ -92,13 +92,30 @@ For a complete list of available Makefile targets, run:
 
 ## Containerized deployment
 
-This version of the IOS-MCN-RAN also comes with a containerized way of deploying Radio Access Network using docker. Different ways of deployment can be found in cicd folder, configure the respective configuration files required for your deployent present in the conf folder. Deploy your own image or the image built by IOS-MCN-RAN by configuring the .env file present in the respective flavors of deployment in the cicd folder.
+This version of the IOS-MCN-RAN also comes with a containerized way of deploying Radio Access Network using docker. Different ways of deployment can be found in cicd folder in ios-mcn-ran, configure the respective .env files in the respective deoployment,
 
 For example:
-Load the docker images by running the following steps, copy the RAN image tar file onto the host machine
+```bash
+cd ios-mcn-ran/cicd/5g_sa_b200_40MHz
+vi .env
 ```
-docker load -i <image.tar>
+Also configure the respective configuration files required for your deployent present in the conf folder according to the deployment.
+
+For example
+```bash
+cd ios-mcn-ran/conf/
+vi gnb-cucp.sa.f1-e1.iisc.conf  # Similarly for CU-UP, DU and o1-config(For o1-adapter if required)
 ```
+
+The docker images can be downloaded from here: [Dcoker images](https://github.com/orgs/ios-mcn/packages?tab=packages&q=dis+)
+
+For example:
+```bash
+docker pull ghcr.io/ios-mcn/ios-mcn-cuup-dis:v0.3.0 # Similarly for CU-CP, DU and adapter-gnb(For O1 interface)
+```
+
+For more details on editing the configuration file, follow: [User Guide](./IOS-MCN%20RAN-DIS%20User-guide.md).<br/>
+For the commands to bring up and bring down the containers, follow: [User Guide - Containerized Deployment](./IOS-MCN%20RAN-DIS%20User-guide.md#containerized-deployment)
 
 ## Related Documentation:
 For instructions on running the components, refer to the [User guide](./IOS-MCN%20RAN-DIS%20User-guide.md).<br>

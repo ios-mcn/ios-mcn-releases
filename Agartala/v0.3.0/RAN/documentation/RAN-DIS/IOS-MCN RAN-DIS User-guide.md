@@ -267,25 +267,44 @@ echo rrc release_rrc <CU_UE_ID>| nc 127.0.0.1 9090 && echo
 
 ## Containerized deployment
 
-The deployment is as easy as modifying the .env file, configuration file,
+The deployment is as easy as modifying the .env file, and configuration files according to the deployment, in the .env file configure the ```REPOSITORY=ios-mcn``` and ```VERSION=v0.3.0```
 ```bash
-cd ios-mcn-ran
+cd ios-mcn-ran/cicd/5g_sa_b200_40MHz/
 # Modify the .env file with the Organization and Image version.
-vi cicd/5g_sa_rfsim/.env
+vi .env
 
+# Go back to ios-mcn-ran/conf
+cd ios-mcn-ran/conf/
 # Modify the CU-CP configuration file with PLMN and AMF IP address.
-vi conf/gnb-cucp.sa.f1-e1.iisc.conf
-vi conf/gnb-cuup.sa.f1-e1.iisc.conf
+vi gnb-cucp.sa.f1-e1.iisc.conf
+vi gnb-cuup.sa.f1-e1.iisc.conf
 
 # The DU configuration file can be modified with the required frequency and bandwidth.
-vi conf/gnb-du.sa.band78.106PRB.1x1-f1-e1-usrpb210.conf
+vi gnb-du.sa.band78.106PRB.1x1-f1-e1-usrpb210.conf
 ```
-and running docker-compose up -d. </br>
+
+To bring up the container run ```docker-compose up -d```. </br>
 ```bash
-cd cicd/5g_sa_rfsim
+cd ios-mcn-ran/cicd/5g_sa_b200_40MHz/
 docker-compose up -d
 ```
 
+To bring down the container run ```docker-compose down```.</br>
+```bash
+cd ios-mcn-ran/cicd/5g_sa_b200_40MHz/
+docker-compose down
+```
+
+To check the status of the containers run ```docker ps -a```.
+```bash
+docker ps -a
+```
+
+The container logs can be checked using the command ```docker logs -f <contaienr_name>```.</br>
+```bash
+# Example
+docker logs -f ios-mcn-cucp
+```
 
 # Advanced deployment
 ## Including RIC interfaces O1 and/or E2.
