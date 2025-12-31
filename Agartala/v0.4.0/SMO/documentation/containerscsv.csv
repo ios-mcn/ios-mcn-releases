@@ -1,0 +1,16 @@
+﻿IMAGE,PORTS,NAMES
+sdnc-web-image:2.6.1,"8080/tcp, 8443/tcp",odlux
+ves-collector:1.12.3,"0.0.0.0:8080->8080/tcp, :::8080->8080/tcp, 8443/tcp",ves-collector
+sdnc-image:2.6.1,"0.0.0.0:18080->8080/tcp, [::]:18080->8080/tcp, 0.0.0.0:18181->8181/tcp, [::]:18181->8181/tcp, 0.0.0.0:18182->8182/tcp, [::]:18182->8182/tcp",controller
+nonrtric-plt-pmlog:1.0.0,"8435/tcp, 0.0.0.0:8436->8436/tcp, :::8436->8436/tcp, 0.0.0.0:8184->8084/tcp, [::]:8184->8084/tcp",pmlog-0
+nonrtric-plt-auth-token-fetch:1.1.1,,logger-auth-token-file-pmlog-0-1
+nonrtric-plt-pmproducer:1.0.1,"0.0.0.0:8084->8084/tcp, :::8084->8084/tcp, 8435/tcp",pm-producer-json2kafka
+pm-file-converter:1.0.1,"0.0.0.0:9881->80/tcp, [::]:9881->80/tcp",kafka-producer-pm-xml2json-0
+datafile-collector:1.0.0,"8100/tcp, 0.0.0.0:8433->8433/tcp, :::8433->8433/tcp",dfc
+nonrtric-controlpanel:2.5.0,"80/tcp, 0.0.0.0:8088->8080/tcp, [::]:8088->8080/tcp",controlpanel
+nonrtric-gateway:1.2.0,"0.0.0.0:9098->9090/tcp, [::]:9098->9090/tcp",nonrtricgateway
+nonrtric-plt-informationcoordinatorservice:1.5.0,"0.0.0.0:8083->8083/tcp, :::8083->8083/tcp, 0.0.0.0:8434->8434/tcp, :::8434->8434/tcp",ics
+nonrtric-plt-rappcatalogue:1.2.0, "0.0.0.0:9096->9096/tcp, :::9096->9096/tcp, 0.0.0.0:9196->9196/tcp, :::9196->9196/tcp",rapp-catalog
+nonrtric-plt-a1policymanagementservice:2.8.1,"0.0.0.0:8043->8043/tcp, :::8043->8043/tcp, 0.0.0.0:8081->8081/tcp, :::8081->8081/tcp, 8433/tcp", a1pms
+nonrtric-plt-dmaapadapter:1.4.0,"0.0.0.0:9086->8084/tcp, [::]:9086->8084/tcp, 0.0.0.0:9087->8435/tcp, [::]:9087->8435/tcp", dmapp-adapter
+nonrtric-plt-dmaapmediatorproducer:1.2.0,"0.0.0.0:8885->8085/tcp, [::]:8885->8085/tcp, 0.0.0.0:8985->8185/tcp, [::]:8985->8185/tcp",dmapp-mediator
