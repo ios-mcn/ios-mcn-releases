@@ -21,27 +21,27 @@ cd IOSMCN-Core-Source
 Step 2: Download the source code tar file.
 
 ```sh
-wget https://github.com/ios-mcn/ios-mcn-releases/raw/refs/heads/main/Agartala/v0.3.0/CORE/source-code/iosmcn.agartala.v0.3.0.core.source.tar.gz
+wget https://github.com/ios-mcn/ios-mcn-releases/raw/refs/heads/main/Agartala/v0.4.0/CORE/source-code/iosmcn.agartala.v0.4.0.core.source.tar.gz
 ```
 
-Step 3: Untar the iosmcn.agartala.v0.3.0.core.source.tar.gz.
+Step 3: Untar the iosmcn.agartala.v0.4.0.core.source.tar.gz.
 
 ```sh
-tar -xvzf iosmcn.agartala.v0.3.0.core.source.tar.gz
-cd iosmcn.agartala.v0.2.0.core.source
+tar -xvzf iosmcn.agartala.v0.4.0.core.source.tar.gz
+cd iosmcn.agartala.v0.4.0.core.source
 ```
 
 Step 4: Untar the network functions -  *\<nf>*-0.0.*\<nf-version>*.iosmcn.core.*\<nf>*.tar.gz.
 
 ```sh
-tar -xvzf amf-0.2.2.iosmcn.core.amf.tar.gz
-cd amf-0.2.2.iosmcn.core.amf
+tar -xvzf amf-0.4.0.iosmcn.core.amf.tar.gz
+cd amf-0.4.0.iosmcn.core.amf
 ```
 or
 
 ```sh
-tar -xvzf smf-0.2.2.iosmcn.core.smf.tar.gz
-cd smf-0.2.2.iosmcn.core.smf
+tar -xvzf smf-0.4.0.iosmcn.core.smf.tar.gz
+cd smf-0.4.0.iosmcn.core.smf
 ```
 ...
 
