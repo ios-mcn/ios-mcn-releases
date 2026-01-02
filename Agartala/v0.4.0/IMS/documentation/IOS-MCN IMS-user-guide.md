@@ -12,9 +12,9 @@ It provides optimized **SIP signaling**, **policy control integration**, and **s
 
 ### Building, Configuration and Installation
 
-Refer this for [deployment and configuration](./IOS-MCN IMS-developer-guide.md)
+Refer this for [deployment and configuration](https://github.com/ios-mcn/ios-mcn-releases-pt/blob/main/Agartala/v0.4.0/IMS/documentation/IOS-MCN%20IMS-developer-guide.md)
 
-Refer this for [installation](./IOS-MCN IMS-installation-guide.md)
+Refer this for [installation](https://github.com/ios-mcn/ios-mcn-releases-pt/blob/main/Agartala/v0.4.0/IMS/documentation/IOS-MCN%20IMS-installation-guide.md)
 
 ---
 
@@ -51,4 +51,4 @@ Use tools like `curl` or Postman to send test HTTP2 requests (if TLS is configur
 https://<AF-BIND-IP>:<AF-BIND-PORT>/n5/<resource>
 ```
 
-The API guide, along with API responses can be found [here](./IOS-MCN IMS-api-guide.md)
+The API guide, along with API responses can be found [here](https://github.com/ios-mcn/ios-mcn-releases-pt/blob/main/Agartala/v0.4.0/IMS/documentation/IOS-MCN%20IMS-api-guide.md)

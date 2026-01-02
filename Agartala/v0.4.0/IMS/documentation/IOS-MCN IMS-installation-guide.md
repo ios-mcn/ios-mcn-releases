@@ -7,7 +7,7 @@ This guide explains how to install and run the IOS-MCN-IMS module either via Doc
 ## Docker-Based Installation
 
 ### Step 1: Build Docker Image
-[Refer](./IOS-MCN IMS-developer-guide.md)
+[Refer](https://github.com/ios-mcn/ios-mcn-releases-pt/blob/main/Agartala/v0.4.0/IMS/documentation/IOS-MCN%20IMS-developer-guide.md)
 
 ### Step 2: Run Container
 
@@ -64,7 +64,7 @@ sudo docker build -t iosmcn-ims .
 ## Bare Metal Installation [PCSCF ONLY]
 
 ### Step 1: Build the Project
-[Refer](./IOS-MCN IMS-developer-guide.md)
+[Refer](https://github.com/ios-mcn/ios-mcn-releases-pt/blob/main/Agartala/v0.4.0/IMS/documentation/IOS-MCN%20IMS-developer-guide.md)
 
 ### Step 2: Prepare Deployment
 
