@@ -136,11 +136,11 @@ sudo netplan apply
 
 ### Download core image
 
-Download file [iosmcn.agartala.v0.4.0.core.images.tar.gz](../release-images/iosmcn.agartala.v0.4.0.core.images.tar.gz) to the directory.
+Download file [iosmcn.agartala.v0.4.0.core.images.tar.xz](../release-images/iosmcn.agartala.v0.4.0.core.images.tar.xz) to the directory.
 
 ```
 wget https://github.com/ios-mcn/ios-mcn-releases/raw/main/Agartala/v0.4.0/CORE/release-images/iosmcn.agartala.v0.4.0.core.images.tar.gz
-tar -xvzf iosmcn.agartala.v0.4.0.core.images.tar.gz
+tar -xvJf iosmcn.agartala.v0.4.0.core.images.tar.xz
 cd iosmcn.agartala.v0.4.0.core.images/IOSMCN-CoreDpm
 ```
 
