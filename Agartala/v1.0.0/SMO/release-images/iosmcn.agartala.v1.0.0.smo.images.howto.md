@@ -69,7 +69,7 @@ vi .env
 | ric-plt-e2mgr| https://github.com/orgs/ios-mcn/packages/container/package/ric-plt-e2mgr |docker pull ghcr.io/ios-mcn/ric-plt-e2mgr:6.0.6
 | ric-plt-a1| https://github.com/orgs/ios-mcn/packages/container/package/ric-plt-a1 |docker pull ghcr.io/ios-mcn/ric-plt-a1:3.2.3
 |ric-plt-rtmgr| https://github.com/orgs/ios-mcn/packages/container/package/ric-plt-rtmgr |docker pull ghcr.io/ios-mcn/ric-plt-rtmgr:0.9.6
- | ric-plt-submgr|https://github.com/orgs/ios-mcn/packages/container/package/ric-plt-submgr| |docker pull ghcr.io/ios-mcn/ric-plt-submgr:0.10.2
+ | ric-plt-submgr|https://github.com/orgs/ios-mcn/packages/container/package/ric-plt-submgr|docker pull ghcr.io/ios-mcn/ric-plt-submgr:0.10.2
  | ric-plt-vespamgr| https://github.com/orgs/ios-mcn/packages/container/package/ric-plt-vespamgr |docker pull ghcr.io/ios-mcn/ric-plt-vespamgr:0.7.5
  | ric-app-bouncer| https://github.com/orgs/ios-mcn/packages/container/package/ric-app-bouncer| docker pull ghcr.io/ios-mcn/ric-app-bouncer:2.0.0
  |ric-app-kpimon-go | https://github.com/orgs/ios-mcn/packages/container/package/ric-app-kpimon-go|docker pull ghcr.io/ios-mcn/ric-app-kpimon-go:1.0.1
