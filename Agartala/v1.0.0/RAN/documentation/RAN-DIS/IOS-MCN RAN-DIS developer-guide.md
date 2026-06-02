@@ -5,7 +5,9 @@ openairinterface5g(RAN): [link](https://gitlab.eurecom.fr/oai/openairinterface5g
 o1-adapter(O1): [link](https://gitlab.eurecom.fr/oai/o1-adapter)<br>
 flexric(E2): [link](https://gitlab.eurecom.fr/mosaic5g/flexric)<br>
 phy(Fronthaul): [link](https://docs.o-ran-sc.org/projects/o-ran-sc-o-du-phy/en/latest/Architecture-Overview_fh.html)<br>
-uhd(Fronthaul): [link](https://uhd.readthedocs.io/en/latest/page_uhd.html)<br>
+uhd_driver(Fronthaul): [link](https://uhd.readthedocs.io/en/latest/page_driver_usage.html)<br>
+uhd_API_usage(Fronthaul): [link](https://uhd.readthedocs.io/en/latest/page_driver_api.html)<br>
+
 
 ## Related Documentation
 - [Installation Guide](./IOS-MCN%20RAN-DIS%20Installation-guide.md)
