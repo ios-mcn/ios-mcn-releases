@@ -36,10 +36,10 @@ To install all required system dependencies, run:
 ```
 ### **Building the Project**
 
-Download the source from: [source-code](https://github.com/ios-mcn/ios-mcn-releases/tree/main/Agartala/v0.4.0/RAN/source-code/)</br>
+Download the source from: [source-code](https://github.com/ios-mcn/ios-mcn-releases/tree/main/Agartala/v1.0.0/RAN/source-code/)</br>
 Untar the release-image and navigate to ios-mcn-ran folder:
 ```bash
-tar -xvf ios-mcn-ran-0.4.0.iosmcn.ran.tar.gz
+tar -xvf ios-mcn-ran-1.0.0.iosmcn.ran.tar.gz
 cd ios-mcn-ran
 ```
 To build the RAN project from source:
@@ -55,10 +55,10 @@ The build process also creates appropriate directories for storing binaries and 
 
 ### **Installing the Project**
 
-Download the baremetal release image from: [release-image](https://github.com/ios-mcn/ios-mcn-releases/tree/main/Agartala/v0.4.0/RAN/release-images/RAN-DIS)</br>
+Download the baremetal release image from: [release-image](https://github.com/ios-mcn/ios-mcn-releases/tree/main/Agartala/v1.0.0/RAN/release-images/RAN-DIS)</br>
 Untar the release-image and navigate to ios-mcn-ran folder:
 ```bash
-tar -xvf ios-mcn-ran-dis-baremetal-v0.4.0.tar.gz
+tar -xvf ios-mcn-ran-dis-baremetal-v1.0.0.tar.gz
 cd ios-mcn-ran
 ```
 To install the compiled binaries and libraries to system directories, run:
@@ -119,7 +119,7 @@ The docker images can be downloaded from here: [Dcoker images](https://github.co
 
 For example:
 ```bash
-docker pull ghcr.io/ios-mcn/ios-mcn-gnb-dis:v0.4.0 # Similarly for CU-UP and adapter-gnb(For O1 interface)
+docker pull ghcr.io/ios-mcn/ios-mcn-gnb-dis:v1.0.0 # Similarly for CU-UP and adapter-gnb(For O1 interface)
 ```
 
 For more details on modifying the configuration for deployment, follow: [User Guide](./IOS-MCN%20RAN-DIS%20User-guide.md).<br/>
