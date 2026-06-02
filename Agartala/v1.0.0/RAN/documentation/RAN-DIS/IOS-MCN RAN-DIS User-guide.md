@@ -129,7 +129,7 @@ sudo ./program_uicc
 
 ## Containerized deployment
 
-The deployment is as easy as modifying the .env file, and configuration files according to the deployment, in the .env file configure the ```REPOSITORY=ios-mcn``` and ```VERSION=v0.4.0```
+The deployment is as easy as modifying the .env file, and configuration files according to the deployment, in the .env file configure the ```REPOSITORY=ios-mcn``` and ```VERSION=v1.0.0```
 ```bash
 cd ios-mcn-ran/cicd/5g_sa_b200_40MHz/
 # Modify the .env file with the Organization and Image version.
