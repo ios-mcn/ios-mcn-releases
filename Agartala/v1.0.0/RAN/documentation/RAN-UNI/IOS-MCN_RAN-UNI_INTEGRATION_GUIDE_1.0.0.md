@@ -2,13 +2,13 @@
 
 INTRODUCTION
 ---
-This document provides a comprehensive guide for integrating both the hardware and software components required to deploy and operate the IOS MCN v0.4.0 Agartala Release. It outlines the step-by-step process to set up and bring up a functional 5G private network.
+This document provides a comprehensive guide for integrating both the hardware and software components required to deploy and operate the IOS MCN v1.0.0 Agartala Release. It outlines the step-by-step process to set up and bring up a functional 5G private network.
 
 PURPOSE AND AUDIENCE
 ---
-The purpose of this document is to provide a clear, structured, and step-by-step approach to integrate the IOS MCN v0.4.0 Agartala Release for a 5G private network setup. It aims to ensure that all configurations, connections, and dependencies are handled correctly for a successful deployment. This document may serve as a reference during testing, troubleshooting, and validation phases of the network rollout.
+The purpose of this document is to provide a clear, structured, and step-by-step approach to integrate the IOS MCN v1.0.0 Agartala Release for a 5G private network setup. It aims to ensure that all configurations, connections, and dependencies are handled correctly for a successful deployment. This document may serve as a reference during testing, troubleshooting, and validation phases of the network rollout.
 
-This document is intended for technical professionals involved in the deployment of 5G private networks using IOS MCN v0.4.0, including system integrators, field engineers, network engineers, validation teams, R&D, and support staff. It assumes a working knowledge of 5G architecture, Linux systems, networking, and the IOS MCN platform, and serves as a practical guide for seamless integration, setup, and troubleshooting.
+This document is intended for technical professionals involved in the deployment of 5G private networks using IOS MCN v1.0.0, including system integrators, field engineers, network engineers, validation teams, R&D, and support staff. It assumes a working knowledge of 5G architecture, Linux systems, networking, and the IOS MCN platform, and serves as a practical guide for seamless integration, setup, and troubleshooting.
 
 INTEGRATION OF RAN UE WITH RU AND CORE
 ---
@@ -21,7 +21,7 @@ PREREQUISITES :
 
 - **SOFTWARE**
 
-  - Ensure all the necessary software are installed. Refer to chapter 5 of the RAN Installation Guide.
+  - Ensure all the necessary software are installed. Refer to chapter 5 of the RAN Installation Guide.(https://github.com/ios-mcn/ios-mcn-releases/blob/main/Agartala/v1.0.0/RAN/documentation/RAN-UNI/IOS-MCN_RAN-UNI_INSTALLATION_GUIDE_1.0.0.md)
 
 
 
@@ -114,7 +114,7 @@ sudo ./phc2sys-master.sh
 
 -   *Username*   - **root**
 
--   *IP Address* - **192.168.x.50**
+-   *IP Address* - **192.168.4.50**
 
 -   *Password*   - **vvdn**
 
@@ -196,7 +196,7 @@ component or service.
  After completing these steps the user **start the nr-softmodem** binary by Running the below mentioned commands after the user have successfully configured the LPRU.
  
 ```
- cd ios-mcn-ran-uni-baremetal-v0.4.0.tar.gz
+ cd ios-mcn-ran-uni-baremetal-v1.0.0.tar.gz
 ```
 ```
  sudo taskset -c 10 ./nr-softmodem -O ./<configuration file> --sa -reorder-thread-disable 1 --thread-pool 3,4,5,7
@@ -224,7 +224,7 @@ binary build for USRP b210 board.
  **Package Information:**
 
 - Download the tar file from the Official channel
-> *https://github.com/ios-mcn/ios-mcn-releases/blob/main/Agartala/v0.4.0/RAN/source-code/iosmcn.agartala.v1.0.0.ran.source.tar.gz*
+> *https://github.com/ios-mcn/ios-mcn-releases/blob/main/Agartala/v1.0.0/RAN/source-code/iosmcn.agartala.v1.0.0.ran.source.tar.gz*
 
  Copy the tar file to the target gNB machine (/home/user/) . Untar the
 file using cmd.
@@ -266,7 +266,7 @@ Set the shared library linking using utility patchelf. You can install this util
 
 After that start the nr-softmodem:
 ```
- cd ios-mcn-ran-uni-baremetal-v0.4.0
+ cd ios-mcn-ran-uni-baremetal-v1.0.0
  sudo taskset -c 10 ./nr-softmodem -O ./<configuration file> --sa -E --usrp-tx-thread-config 1 --thread-pool 3,4,5
 ```
 

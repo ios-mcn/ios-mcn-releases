@@ -237,9 +237,9 @@ emphasis on network performance and memory optimization.
 These are some screenshot of the BIOS setting which is being used for
 running 5g soft modem with high network proficiency.
 
-![](../../documentation/RAN-UNI/images/ran_installation/image1.jpeg)
+    ![](../../documentation/RAN-UNI/images/ran_installation/image1.jpeg)
 
-Figure 1	Device-level BIOS configuration for RAN optimization
+    Figure 1	Device-level BIOS configuration for RAN optimization
 
 **The BIOS is configured to optimize virtualization, memory access, and
 network performance for RAN workloads. The target platform is a
@@ -266,9 +266,9 @@ SR-IOV.**
 
 -   Configure BIOS to support NUMA node awareness if available
 
-![](../../documentation/RAN-UNI/images/ran_installation/image2.jpeg)
+    ![](../../documentation/RAN-UNI/images/ran_installation/image2.jpeg)
 
-Figure 2	Extreme Memory Profile BIOS setting
+    Figure 2	Extreme Memory Profile BIOS setting
 
 
 **3.3. VT-d (Virtualization Technology for Directed I/O)**
@@ -287,9 +287,9 @@ Figure 2	Extreme Memory Profile BIOS setting
 
 -   Critical for: VM workloads requiring direct hardware access
 
-![](../../documentation/RAN-UNI/images/ran_installation/image3.jpeg)
+    ![](../../documentation/RAN-UNI/images/ran_installation/image3.jpeg)
 
-Figure 3:	BIOS setting showing VT-d enabled
+    Figure 3:	BIOS setting showing VT-d enabled
 
 
 **3.4. SR-IOV (Single Root I/O Virtualization)**
@@ -306,7 +306,7 @@ Figure 3:	BIOS setting showing VT-d enabled
 
     -   Allows multiple VMs to share physical network adapters
 
--   ![](../../documentation/RAN-UNI/images/ran_installation/image4.jpeg) 
+  ![](../../documentation/RAN-UNI/images/ran_installation/image4.jpeg) 
    
   Figure 4	SR-IOV output page showing enabled virtualization support
 
@@ -360,10 +360,10 @@ in detail.*
 
 3.  **Reboot the system** after the firmware update is completed.
 
-![](../../documentation/RAN-UNI/images/ran_installation/image5.jpeg) 
+    ![](../../documentation/RAN-UNI/images/ran_installation/image5.jpeg) 
 
-Figure 5:Intel® Ethernet Network Adapter E810 details After BIOS configuration we need to update the Firmware
-update at E810 card.
+    Figure 5:Intel® Ethernet Network Adapter E810 details After BIOS configuration we need to update the Firmware
+    update at E810 card.
 
 
 **NOTE:**
@@ -501,9 +501,9 @@ cd ios-mcn-ran
 
 > **Note:** nr-softmodem binary in this package will works for both USRP as well as LPRU.
 
-![](../../documentation/RAN-UNI/images/ran_installation/image7.png) 
+    ![](../../documentation/RAN-UNI/images/ran_installation/image7.png) 
 
-Figure 6	Extracted contents of the RAN software tar package
+    Figure 6	Extracted contents of the RAN software tar package
 
 **5.3. Post-Extraction Setup**
 ----
@@ -570,16 +570,16 @@ sudo /home/suadmin/IOS/dpdk-stable-20.11.9/usertools/dpdk-devbind.py--bind vfio-
 ```
 cat /proc/cmdline
 ```
-![](../../documentation/RAN-UNI/images/ran_installation/image8.jpeg)
+    ![](../../documentation/RAN-UNI/images/ran_installation/image8.jpeg)
 
-Figure 7	Output of /proc/cmdline showing kernel boot parameters
+    Figure 7	Output of /proc/cmdline showing kernel boot parameters
 
 -**This command displays detailed information about the current CPU
     frequency and its various settings.**
 
-![](../../documentation/RAN-UNI/images/ran_installation/image9.jpeg)
+    ![](../../documentation/RAN-UNI/images/ran_installation/image9.jpeg)
 
- Figure 8	Output of cpupower frequency-info for CPU frequency settings
+    Figure 8	Output of cpupower frequency-info for CPU frequency settings
 
 ```
 cpupower frequency-info
@@ -594,9 +594,9 @@ cpupower frequency-info
 binary build for USRP b210 board. For execution we need to connect
  b210 on the machine on USB port 3.0.
 
-![](../../documentation/RAN-UNI/images/ran_installation/image10.png)
+    ![](../../documentation/RAN-UNI/images/ran_installation/image10.png)
 
-Figure 9: USRP B210 to gNB hardware connection diagram
+    Figure 9: USRP B210 to gNB hardware connection diagram
 
 **Package Information:**
 
@@ -670,13 +670,13 @@ forwarding. The script ensures synchronization with the Grandmaster
 clock and prepares the system for real-time 5G processing. Unsafe
 noiommu mode is enabled to support VFIO-based device access.
     
-![](../../documentation/RAN-UNI/images/ran_installation/image11.png) 
+    ![](../../documentation/RAN-UNI/images/ran_installation/image11.png) 
 
-Figure 10	Contents of the test.sh script for system initialization
+    Figure 10	Contents of the test.sh script for system initialization
 
-![](../../documentation/RAN-UNI/images/ran_installation/image12.png)
+    ![](../../documentation/RAN-UNI/images/ran_installation/image12.png)
 
- Figure 11	Route creation output after running test.sh script
+    Figure 11	Route creation output after running test.sh script
 
 2.  Run:
 
@@ -694,14 +694,14 @@ Figure 10	Contents of the test.sh script for system initialization
     especially when handling massive traffic in 5G.
 
 
-![](../../documentation/RAN-UNI/images/ran_installation/image13.png) 
+    ![](../../documentation/RAN-UNI/images/ran_installation/image13.png) 
 
-Figure 12	Running VF configuration script with user privileges
+    Figure 12	Running VF configuration script with user privileges
 
 
-![](../../documentation/RAN-UNI/images/ran_installation/image14.png) 
+    ![](../../documentation/RAN-UNI/images/ran_installation/image14.png) 
 
-Figure 13	Details of vf.sh script for DPDK and VF setup
+    Figure 13	Details of vf.sh script for DPDK and VF setup
 
 **Then, check whether the function has been created.**
 >
@@ -710,9 +710,9 @@ Figure 13	Details of vf.sh script for DPDK and VF setup
  ip link show
  ```
 
-![](../../documentation/RAN-UNI/images/ran_installation/image15.png) 
+    ![](../../documentation/RAN-UNI/images/ran_installation/image15.png) 
 
-Figure 14	Output of ip link show displaying virtual function interfaces
+    Figure 14	Output of ip link show displaying virtual function interfaces
 
 
 3.  Run: 
@@ -723,13 +723,13 @@ Figure 14	Output of ip link show displaying virtual function interfaces
  This command runs ptp4l to make the gNB a PTP slave to the Fibrolan Grandmaster using the G.8275.1 telecom profile, which provides accurate phase and frequency synchronization. It binds the PTP process to CPU core 2 for better real-time performance and uses the network
 interface enp2s0f0 for PTP packets. This synchronization is essential for TDD-based 5G systems to ensure time alignment across gNB and LPRU.
 
-![](../../documentation/RAN-UNI/images/ran_installation/image16.png) 
+    ![](../../documentation/RAN-UNI/images/ran_installation/image16.png) 
 
-Figure 15	Script contents for slave PTP configuration (slave-enp2s0fo.sh)
+    Figure 15	Script contents for slave PTP configuration (slave-enp2s0fo.sh)
 
-![](../../documentation/RAN-UNI/images/ran_installation/image17.png)
+    ![](../../documentation/RAN-UNI/images/ran_installation/image17.png)
 
-Figure 16	Output after executing slave PTP configuration script
+    Figure 16	Output after executing slave PTP configuration script
 
 4.  Run: 
    
@@ -742,13 +742,13 @@ sudo ./master-enp2s0f1.sh
  ensures accurate time distribution from the gNB to the LPRU, enabling
  proper synchronization for 5G operations.
 
-![](../../documentation/RAN-UNI/images/ran_installation/image18.png)
+    ![](../../documentation/RAN-UNI/images/ran_installation/image18.png)
 
- Figure 17	Script contents for master PTP configuration (master-enp2s0f1.sh)
+    Figure 17	Script contents for master PTP configuration (master-enp2s0f1.sh)
 
->![](../../documentation/RAN-UNI/images/ran_installation/image19.png)
+    ![](../../documentation/RAN-UNI/images/ran_installation/image19.png)
 
-Figure 18	Output of master PTP script to sync LPRU via gNB
+    Figure 18	Output of master PTP script to sync LPRU via gNB
 
 5.  Run : 
 ```
@@ -762,15 +762,15 @@ sudo ./phc2sys-master.sh
  precision.
 
 
-![](../../documentation/RAN-UNI/images/ran_installation/image20.png)
-Figure 19	Script for phc2sys-master to sync system and hardware clocks
+    ![](../../documentation/RAN-UNI/images/ran_installation/image20.png)
+    Figure 19	Script for phc2sys-master to sync system and hardware clocks
 
 
 
 
-![](../../documentation/RAN-UNI/images/ran_installation/image21.png)
+    ![](../../documentation/RAN-UNI/images/ran_installation/image21.png)
 
-Figure 20	Output of phc2sys-master script
+    Figure 20	Output of phc2sys-master script
 
 
 **To access this LPRU (LOW POWER RADIO UNIT),**
@@ -785,9 +785,9 @@ Figure 20	Output of phc2sys-master script
 
 -   Password: **vvdn**
 
-![](../../documentation/RAN-UNI/images/ran_installation/image22.png) 
+    ![](../../documentation/RAN-UNI/images/ran_installation/image22.png) 
 
-Figure 21	Logging into LPRU terminal
+    Figure 21	Logging into LPRU terminal
 
 **Logging into the terminal of the LPRU:**
 
@@ -806,9 +806,9 @@ file and filters out lines that contain the word sync. You're
 essentially waiting and watching until a synchronization message
 appears in the log.
 
- ![](../../documentation/RAN-UNI/images/ran_installation/image23.png)
+    ![](../../documentation/RAN-UNI/images/ran_installation/image23.png)
  
- Figure 22	LPRU synchronization confirmation in terminal
+    Figure 22	LPRU synchronization confirmation in terminal
 >
 - **You can also physically check the bottom most LED on the LPRU.**
 
@@ -854,7 +854,7 @@ settings in embedded/5G systems.**
 
     ![](../../documentation/RAN-UNI/images/ran_installation/image26.png)
 
-Figure 25: Memory register write command run in LPRU terminal
+    Figure 25: Memory register write command run in LPRU terminal
 
 > **4. To edit the live running configuration in Sysrepo using the vi
     editor and To configure and activate transmit carrier parameters ---
@@ -875,7 +875,7 @@ component or service.**
 
     ![](../../documentation/RAN-UNI/images/ran_installation/image27.png)
 
-Figure 26	Screenshot of sysrepocfg editor showing ACTIVE status
+    Figure 26	Screenshot of sysrepocfg editor showing ACTIVE status
 
 >- After that **start the nr-softmodem**:
 >-Run the below mentioned commands after the user have successfully configured the LPRU.
@@ -902,12 +902,6 @@ sudo taskset -c 10 ./nr-softmodem -O ./<configuration file> --sa -reorder-thread
 Before configuring the LPRU we need to run the following commands to make our system(gNB) ready on a configuration level and to synchronize the clocks with respect to the Grandmaster switch which provides 
 GPS signals.
 
-![](../../documentation/RAN-UNI/images/ran_installation/lekha_structure_diagram_new.jpeg)
-
- Figure: Lekha MaRut LPRU Connecttion Diagram.
-
- The commands and their description in detail can be found on the link noted down below:
-
 **6.3.1. Configuration/Setup:**
  
 *To access this MARUT LEKHA LPRU (LOW POWER RADIO UNIT)*
@@ -921,7 +915,7 @@ We need to ssh into the machine with the below provided details:
 - Password: *the password set by the developer*
 
 
-![](../../documentation/RAN-UNI/images/ran_installation/lekha_marut_login page.png)
+![](../../documentation/RAN-UNI/images/ran_installation/lekha_marut_login.png)
 
 Figure#: Logging into LPRU terminal
 
@@ -1008,7 +1002,7 @@ set_dlcenterfrequency 36050280000
 >Run the below mentioned commands after the user have successfully configured the LPRU.
 
 ```
-cd <v.0.0.3.baremetal.tar.gz> #go the directory where the RAN-source package was unzipped and built.
+cd <ios-mcn-ran-uni-baremetal-v1.0.0.tar.gz> #go the directory where the RAN-source package was unzipped and built.
 
 sudo taskset -c 10 ./nr-softmodem -O ./<configuration file> --sa -reorder-thread-disable 1 --thread-pool 3,4,5,7  #3,4,5,7 are the cores used in isolation
 ```

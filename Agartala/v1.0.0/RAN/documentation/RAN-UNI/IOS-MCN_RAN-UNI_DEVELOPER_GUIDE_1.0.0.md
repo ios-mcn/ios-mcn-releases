@@ -130,17 +130,16 @@ cd IOSMCN-RAN-Source
 Step 2: Download the source code tar file.
 
 ```
-wget https://github.com/ios-mcn/ios-mcn-releases/tree/main/Agartala/v1.0.0/RAN/source-code/iosmcn.agartala.v1.0.0.RAN.source.tar
+wget https://github.com/ios-mcn/ios-mcn-releases/blob/main/Agartala/v1.0.0/RAN/release-images/RAN-UNI/ios-mcn-ran-uni-baremetal-v1.0.0.tar.gz
 ```
 
 Step 3: Untar the iosmcn.agartala.v1.0.0.ran.source.tar
 
 ```
-tar -xvf iosmcn.agartala.v1.0.0.ran.source.tar
-cd iosmcn.agartala.v1.0.0.RAN.source.tar
+tar -xvzf iosmcn.agartala.v1.0.0.ran.uni.source.tar.gz
+cd iosmcn.agartala.v1.0.0.ran.uni.source
 
-tar -xvzf openairinterface5g-1.0.0.openairinterface5g.tar.gz
-cd openairinterface5g-1.0.0.openairinterface5g
+cd openairinterface5g
 ```
 
 Building gNB for USRP:

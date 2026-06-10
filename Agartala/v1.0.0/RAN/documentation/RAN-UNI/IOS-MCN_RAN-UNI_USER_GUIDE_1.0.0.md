@@ -55,7 +55,7 @@ Please refer to the UNI_RAN Installation Guide document for further details.
 ----
 
 - Please ensure that you have successfully installed an open-source Core server installed that you are trying to link to the RAN.
-- In this section, the test environment uses IOSMCN-Core-server i.e., a part of the *Agartala v0.4.0 IOS-MCN CORE Sub-Project Release*. The relevant guides can be referred in the same repository.
+- In this section, the test environment uses IOSMCN-Core-server i.e., a part of the *Agartala v1.0.0 IOS-MCN CORE Sub-Project Release*. The relevant guides can be referred in the same repository.
 
 **Booting up the IOSMCN-Core**
 --
@@ -138,8 +138,8 @@ Figure#: USRP b210 to gNB hardware connection diagram
 After that start the nr-softmodem:
 
 ```
- Untar release image file by the command tar -xzvf v.0.0.X.baremetal.tar.gz
- cd v.0.0.X.baremetal
+ Untar release image file by the command tar -xzvf ios-mcn-ran-uni-baremetal-v1.0.0.tar.gz
+ cd ios-mcn-ran-uni-baremetal-v1.0.0
  cd ios-mcn-ran
  mv bin/* .
  mv lib/* .
@@ -272,7 +272,7 @@ Figure#:Screenshot of sysrepocfg editor showing ACTIVE status
 >Run the below mentioned commands after the user have successfully configured the LPRU.
 
 ```
-cd <v.0.0.3.baremetal.tar.gz> #go the directory where the RAN-source package was unzipped and built.
+cd <ios-mcn-ran-uni-baremetal-v1.0.0> #go the directory where the RAN-source package was unzipped and built.
 ```
 ```
  sudo taskset -c 10 ./nr-softmodem -O ./<configuration file> --sa -reorder-thread-disable 1 --thread-pool 3,4,5,7 #here 3,4,5,7 are the cores used for  
@@ -397,7 +397,7 @@ MARUT> set_src_macaddress 0 00:0A:35:00:24:22
 >Run the below mentioned commands after the user have successfully configured the LPRU.
 
 ```
-cd <v.0.0.3.baremetal.tar.gz> #go the directory where the RAN-source package was unzipped and built.
+cd <ios-mcn-ran-uni-baremetal-v1.0.0> #go the directory where the RAN-source package was unzipped and built.
 
  sudo taskset -c 10 ./nr-softmodem -O ./<configuration file> --sa -reorder-thread-disable 1 --thread-pool 3,4,5,7 
 
@@ -418,7 +418,7 @@ We need to login via browser GUI into the machine with the below provided detail
 
 ![](../../documentation/RAN-UNI/images/ran_installation/.png)
 
-Figure#: Logging into RRU GUI(localhost)
+Logging into RRU GUI(localhost) using the above credential.
 
 Once you are logged in, Follow the below provided steps to sync up the HPRU, this includes the synchronization of radio unit, the compression setting , RF antenna configuration, channel parameters and other things.
 
